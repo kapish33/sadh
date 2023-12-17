@@ -6,19 +6,22 @@ const Table: React.FC<{ page: number; size: number }> = async ({
   page,
   size,
 }) => {
-  const result = await getPaginatedData("users", 1, 10);
-  const { data, hasNext, hasPrevious } = result;
+  const { data, hasNext, hasPrevious } = await getPaginatedData(
+    "customer",
+    page,
+    size
+  );
 
   return (
     <div>
-      <div className="flex gap-2 justify-between">
+      <div className="flex bg-error-25 gap-2 justify-between">
         <div>
           <input className="bg-red-400" type="text" name="" id="" />
         </div>
         <div className="flex">
           {/* Previous Page Link */}
 
-          <Link href={hasPrevious ? `/admin/${page - 1}/${size}` : ""}>
+          <Link href={hasPrevious ? `/dashboard/${page - 1}/${size}` : ""}>
             <button
               className={`btn primary me-2 ${!hasPrevious && "disabled"}`}
             >
@@ -27,7 +30,7 @@ const Table: React.FC<{ page: number; size: number }> = async ({
           </Link>
 
           {/* Next Page Link */}
-          <Link href={hasNext ? `/admin/${page + 1}/${size}` : ""}>
+          <Link href={hasNext ? `/dashboard/${page + 1}/${size}` : ""}>
             <button className={`btn primary ${!hasNext && "disabled"}`}>
               Next
             </button>

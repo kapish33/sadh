@@ -1,15 +1,15 @@
-import {  Shades } from "./types/type";
+import { Shades } from "./types/type";
 
 export const ErrorColors: Record<keyof Shades, string> = {
-  25: '#FFF0F0',
-  50: '#FFD9D9',
-  100: '#FFB0B0',
-  200: '#FF8888',
-  300: '#FF5F5F',
-  400: '#FF3636',
-  500: '#FF1A1A',
-  600: '#E60000',
-  700: '#C40000',
-  800: '#A10000',
-  900: '#8A0000',
+  25: "#F2E3E3", // Lightest Red
+  50: "#F0D2D2", // Lighter Red
+  100: "#EFBFBF", // Light Red
+  200: "#ED9F9F", // Medium Red
+  300: "#EC7A7A", // Dark Red
+  400: "#EA5D5D", // Darker Red
+  500: "#E83232", // Darkest Red
+  600: "#F11D00", // Vibrant Red
+  700: "#D61800", // Dark Vibrant Red
+  800: "#C91902", // Dark Red
+  900: "#B71701", // Very Dark Red
 };

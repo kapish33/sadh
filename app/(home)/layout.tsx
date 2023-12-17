@@ -1,17 +1,8 @@
 import Footer from "@components/server/Footer";
-import "./globals.scss";
-import { Montserrat, Open_Sans } from "next/font/google";
+import "../globals.scss";
 import Headers from "@components/Headers";
-export { universalMetaData as metadata } from "@seoconfig/universal"; // For Setting Global SEO
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+import { montserrat, openSans } from "@config/fonts";
+export { universalMetaData as metadata } from "@seoconfig/universal"; 
 
 export default function RootLayout({
   children,

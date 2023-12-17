@@ -4,17 +4,16 @@ import {
   collection,
   deleteDoc,
   doc,
+  getDoc,
   getDocs,
-  updateDoc,
 } from "firebase/firestore";
 
-type OPERATIONS = "GET" | "POST" | "DELETE" | "PUT";
+type OPERATIONS = "GET" | "POST" | "DELETE" | "PUT" | "GET_BY_ID";
 
-interface Data {
-  id: string;
-  name: string;
-  email: string;
-  // Add other fields as needed
+export interface Data {
+  id?: string;
+  name?: string;
+  email?: string;
 }
 
 export default async function crudOperations(
@@ -52,6 +51,25 @@ export default async function crudOperations(
         // Perform DELETE operation (e.g., delete a document)
         await deleteDoc(doc(dataCollection, data!.id));
         return { message: "Document deleted successfully" };
+      } catch (error) {
+        throw new Error("Internal server error");
+      }
+
+    case "GET_BY_ID":
+      try {
+        // Perform GET_BY_ID operation (retrieve a specific document by ID)
+        if (!data?.id) {
+          throw new Error("ID is required for GET_BY_ID operation");
+        }
+
+        const documentSnapshot = await getDoc(doc(dataCollection, data.id));
+
+        if (documentSnapshot.exists()) {
+          const documentData = documentSnapshot.data();
+          return { id: documentSnapshot.id, ...documentData };
+        } else {
+          throw new Error("Document not found");
+        }
       } catch (error) {
         throw new Error("Internal server error");
       }

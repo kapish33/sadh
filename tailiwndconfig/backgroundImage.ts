@@ -22,6 +22,18 @@ type BackgroundImage = {
       name: "lock",
       url: "https://cdn.buttercms.com/02fJfiqSc652idXvd0xg",
     },
+    {
+      name: "sadhana-background-logo",
+      url: "../assets/sadhana_background_logo.png"
+    },
+    {
+      name: "btn",
+      url: "../assets/buttonImage.png"
+    },
+    {
+      name: "main",
+      url: "../assets/background_image.png"
+    }
   ];
   
   const finalObject: Record<string, string> = {};

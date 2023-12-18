@@ -63,8 +63,8 @@ export default async function Home() {
       </div>
 
       {/* Animated Tab */}
-      <div className="flex justify-center items-center mb-[58px] md:mb-[165px] ">
-          <Image src={AnimatedTab} alt="Tab"/>
+      <div className="flex justify-center items-center mb-[58px] md:mb-[165px] w-full">
+          <Image src={AnimatedTab} alt="Tab" className="w-full md:w-[70%]" />
       </div>
 
       <div className="flex justify-center items-center flex-col gap-[10px]">
@@ -241,7 +241,7 @@ that which is auspicious"/>
       />
 
       <div className="flex flex-col justify-center items-center md:mt-[88px] mt-[117px]">
-        <div className="h-[220px] w-[210px] bg-[url('../../assets/sadhana_background_logo.png')] flex justify-center items-center relative">
+        <div className="h-[220px] w-[210px] bg-sadhana-background-logo flex justify-center items-center relative">
         <svg xmlns="http://www.w3.org/2000/svg" width="286" height="54" viewBox="0 0 286 54" fill="none" className="absolute md:hidden">
                 <g filter="url(#filter0_f_181_13)">
                 <ellipse cx="143" cy="27" rx="122" ry="6" fill="#00C7FF"/>
@@ -254,7 +254,7 @@ that which is auspicious"/>
                 </filter>
                 </defs>
             </svg>
-          <div className="bg-none bg-[#F11D00] rounded-[9.44px] border-2 border-[#CC7A00] md:border-none md:bg-transparent md:bg-[url('../../assets/buttonImage.png')] md:w-[175px] w-[124px] md:h-[63px] h-[33px] flex justify-center items-center z-10 md:!shadow-none
+          <div className="bg-none bg-[#F11D00] rounded-[9.44px] border-2 border-[#CC7A00] md:border-none md:bg-transparent md:bg-btn md:w-[175px] w-[124px] md:h-[63px] h-[33px] flex justify-center items-center z-10 md:!shadow-none
           " style={{
             boxShadow: "0px 0px 9px 2px rgba(255, 255, 255, 0.49)"
           }}>
@@ -299,7 +299,7 @@ that which is auspicious"/>
               <h3 className="text-[#0292B5] font-[Open Sans] md:text-[56px] font-[600] md:leading-[59.5px] md:tracking-[1.68px] uppercase">
                 Offer A Gift Of Dharma To Your Loved Ones 
               </h3>
-              <div className="bg-[url(../../assets/buttonImage.png)] w-[175px] h-[63px] flex justify-center items-center">
+              <div className="bg-btn w-[175px] h-[63px] flex justify-center items-center">
                   <p className="text-base-white md:text-[25px] font-[Open Sans] font-[600] md:leading-[30.5px] md:tracking-[0.75px]">Preorder</p>
               </div>
           </div>

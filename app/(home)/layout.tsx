@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} ${openSans.className}`}>
-        <div id="main">
+        <div id="main" className="bg-main">
           <Headers />
           {children}
           <Footer />

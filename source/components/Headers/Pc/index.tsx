@@ -6,8 +6,8 @@ interface IndexProps {}
 
 const Index: React.FC<IndexProps> = () => {
   return (
-    <div className="hidden md:block fixed bg-primary-500 opacity-90 shadow-nav-desktop">
-      <div className="flex items-center w-screen justify-between">
+    <div className="hidden md:block fixed bg-primary-500 opacity-90 shadow-nav-desktop w-full">
+      <div className="flex items-center w-screen justify-between max-w-5xl mx-auto">
         <Image
           src={HomeImage.sadhanaLogo.img}
           alt={HomeImage.sadhanaLogo.alt}

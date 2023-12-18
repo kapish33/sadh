@@ -1,6 +1,7 @@
 interface Route {
   path: string;
   name: string;
+  class?: string;
 }
 
 export const routes: Record<string, Route> = {
@@ -8,26 +9,31 @@ export const routes: Record<string, Route> = {
     path: "/",
     name: "Home",
   },
-  outTeam: {
-    path: "/out-team",
-    name: "Out Team",
-  },
   // Work SubPath ENds
   about: {
     path: "/about",
     name: "About",
   },
-  contact: {
-    path: "/contact-us",
-    name: "Contact us",
+  product: {
+    path: "/product",
+    name: "Product",
   },
-  blogs: {
-    path: "/blogs",
-    name: "Blogs",
+  contact: {
+    path: "/products",
+    name: "Products",
+  },
+  ourStory: {
+    path: "/our-story",
+    name: "Our Story",
   },
   terms: {
-    path: "/terms",
-    name: "Terms & Conditions",
+    path: "/contact",
+    name: "Contact",
+  },
+  preorder: {
+    path: "/preorder",
+    name: "Preorder",
+    class: "btn primary",
   },
   dashboard: {
     path: "/dashboard",
@@ -38,9 +44,7 @@ export const routes: Record<string, Route> = {
 export const appRoutesPages: Record<string, Route[]> = {
   footer: [
     routes.home,
-    routes.outTeam,
     routes.about,
-    routes.blogs,
     routes.contact,
     {
       path: "https://www.facebook.com/manavsachdevdesignstudio",

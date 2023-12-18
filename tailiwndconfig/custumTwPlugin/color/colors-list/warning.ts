@@ -9,7 +9,7 @@ export const WarningColors: Record<keyof Shades, string> = {
   400: '#FFA31E',
   500: '#FF9310',
   600: '#E67A0C',
-  700: '#C9630F',
+  700: '#E77300',
   800: '#A64C13',
   900: '#8A3E13',
 };

@@ -3,3 +3,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#main {
+    background-image: url(./../assets/background_image.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.quote {
+    quotes: "“" "”";
+    position: relative;
+    padding-left: 40px;
+}
+
+.quote::before {
+    quotes: "“" "”";
+    content: open-quote;
+    font-size: 4em;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    font-family: Georgia, serif;
+}
+
+.quote::after {
+    quotes: "“" "”";
+    content: close-quote;
+    font-size: 4em;
+    bottom: -20px;
+    position: absolute;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+@media screen and (max-width: 756px) {
+
+    .quote {
+        quotes: "“" "”";
+        position: relative;
+        padding-left: 40px;
+    }
+    
+    .quote::before {
+        quotes: "“" "”";
+        content: open-quote;
+        font-size: 4rem;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        font-family: Georgia, serif;
+    }
+    
+    .quote::after {
+        quotes: "“" "”";
+        content: close-quote;
+        font-size: 4em;
+        bottom: -10px;
+        position: absolute;
+        color: white;
+        font-family: Georgia, serif;
+    }
+
+}

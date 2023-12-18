@@ -1,5 +1,11 @@
+import Mobile from "./Mobile";
+import Pc from "./Pc";
+
 const Footer: React.FC = () => {
-  return <footer className="">Footer</footer>;
+ return <>
+    <Pc/>
+    <Mobile/>
+ </>
 };
 
 export default Footer;

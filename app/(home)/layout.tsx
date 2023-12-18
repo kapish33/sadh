@@ -12,9 +12,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} ${openSans.className}`}>
-        <Headers />
-        {children}
-        <Footer />
+        <div id="main">
+          <Headers />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

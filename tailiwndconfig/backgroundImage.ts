@@ -1,6 +1,8 @@
+import { StaticImageData } from "next/image";
+
 type BackgroundImage = {
     name: string;
-    url: string;
+    url: string | StaticImageData;
   };
   
   const backgroundImageArray: BackgroundImage[] = [
@@ -28,3 +30,4 @@ type BackgroundImage = {
     finalObject[name] = `url(${url})`;
   });
   
+  export default finalObject;

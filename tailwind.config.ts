@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "./tailiwndconfig/custumTwPlugin/fonts";
 import { colors } from "./tailiwndconfig/custumTwPlugin/color";
 import { boxShadows as boxShadow } from "./tailiwndconfig/boxShadow";
+import finalObject from "./tailiwndconfig/backgroundImage";
 
 const config: Config = {
   content: [
@@ -16,6 +17,7 @@ const config: Config = {
       boxShadow,
       colors,
       fontFamily,
+      backgroundImage: finalObject
     },
   },
   plugins: [require("./tailiwndconfig/custumTwPlugin/typography")],

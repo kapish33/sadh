@@ -1,7 +1,7 @@
 import Footer from "@components/server/Footer";
 import "../globals.scss";
 import Headers from "@components/Headers";
-import { montserrat, openSans } from "@config/fonts";
+import { montserrat, openSans, tiroGurmukhi } from "@config/fonts";
 export { universalMetaData as metadata } from "@seoconfig/universal"; 
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} ${openSans.className}`}>
+      <body className={`${montserrat.className} ${openSans.className} ${tiroGurmukhi.className}`}>
         <div id="main" className="bg-main">
           <Headers />
           {children}

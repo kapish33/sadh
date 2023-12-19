@@ -1,7 +1,7 @@
 export const universalMetaData = {
   metadataBase: new URL('https://manavsachdevdesign.com'),
   title: {
-    default: 'Manav Sach dev Design',
+    default: 'Sadhana',
     template: `%s | Manav Sach dev Design`,
   },
   description: 'The Ultimte Service provides Manav Sach dev Design',

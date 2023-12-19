@@ -1,5 +1,4 @@
 import { raz_pay } from "@/source/config/razorPayConfig";
-import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
 const dummyProducts = [
@@ -25,7 +24,7 @@ const dummyProducts = [
   },
 ];
 
-export async function POST(request: Request, response: NextApiResponse) {
+export async function POST(request: Request) {
   const { productId } = await request.json();
 
   const findProductForAmount = dummyProducts.find((product) => {
@@ -53,7 +52,7 @@ export async function POST(request: Request, response: NextApiResponse) {
   const order = await raz_pay.orders.create(options);
   console.log("findProductForAmount", order);
   return NextResponse.json(
-    { data: order },
+    { order },
     {
       status: 200,
     }

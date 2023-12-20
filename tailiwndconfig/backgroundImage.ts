@@ -33,6 +33,18 @@ type BackgroundImage = {
     {
       name: "main",
       url: "../assets/background_image.png"
+    },
+    {
+      name: "shiva-bg",
+      url: "../assets/shiva_bg.png"
+    },
+    {
+      name: "durga-bg",
+      url: "../assets/durga.png"
+    },
+    {
+      name: "water-bg",
+      url: "../assets/water-bg.png"
     }
   ];
   

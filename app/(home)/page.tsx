@@ -64,79 +64,80 @@ export default async function Home() {
       </div>
 
       {/* Animated Tab */}
+        <div className="flex justify-center items-center flex-col gap-[10px] relative">
+          <h1 className="text-base-white px-[70px] md:px-0 text-center capitalize font-open-sans text-[37px] md:text-[48px] font-[300] leading-[55px] tracking-[0.37px] md:tracking-[0.48px] mb-[20px] md:mb-0">
+            Welcome to sadhana Tablet
+          </h1>
 
-      <div className="flex justify-center items-center flex-col gap-[10px]">
-        <h1 className="text-base-white px-[70px] md:px-0 text-center capitalize font-open-sans text-[37px] md:text-[48px] font-[300] leading-[55px] tracking-[0.37px] md:tracking-[0.48px] mb-[20px] md:mb-0">
-          Welcome to sadhana Tablet
-        </h1>
+          <div className="
+              flex flex-col
+              items-center 
+            text-amber-100
+              text-[15px]
+              text-center
+              md:text-2xl
+              font-open-sans
+              font-[300]
+              leading-[24px]
+              tracking-[0.45px]
+              md:leading-[38px]
+              md:tracking-[0.72px]"
+          >
+            <p>Vedic wisdom meets modern ease <br />
+                Elevate your spiritual with sacred sadhanas, e-books, <br className="md:hidden" /> music, podcasts <br className="hidden md:block" /> and meditations
+            </p>
+          </div>
 
-        <div className="
-            flex flex-col
-            items-center 
-          text-amber-100
-            text-[15px]
-            text-center
-            md:text-2xl
+          <div className="flex justify-center items-center w-full">
+            <Image src={AnimatedTab} alt="Tab" className="w-full md:w-[65%]" />
+        </div>
+          <p
+            className="
+            text-base-white
+            text-lg
+            font-[400]
+            !text-[11px]
+            md:!text-[18px]
+            mt-[-8%]
+            md:mt-[-4%]
             font-open-sans
-            font-[300]
-            leading-[24px]
-            tracking-[0.45px]
-            md:leading-[38px]
-            md:tracking-[0.72px]"
-        >
-          <p>Vedic wisdom meets modern ease <br />
-              Elevate your spiritual with sacred sadhanas, e-books, <br className="md:hidden" /> music, podcasts <br className="hidden md:block" /> and meditations
+            capitalize
+            leading-[38px]
+            tracking-[0.33px]
+            mb-[91px]
+            md:mb-[63px]"
+          >
+            Crafted By OM Swami
           </p>
-        </div>
 
-        <div className="flex justify-center items-center w-full">
-          <Image src={AnimatedTab} alt="Tab" className="w-full md:w-[65%]" />
-      </div>
-        <p
-          className="
-          text-base-white
-          text-lg
-          font-[400]
-          !text-[11px]
-          md:!text-[18px]
-          mt-[-8%]
-          md:mt-[-4%]
-          font-open-sans
-          capitalize
-          leading-[38px]
-          tracking-[0.33px]
-          mb-[91px]
-          md:mb-[63px]"
-        >
-          Crafted By OM Swami
-        </p>
+          <div className="flex justify-center flex-col items-center text-white">
+            <p className="text-[#FFE8BB] md:text-[27px] font-[400] text-[15px] leading-[22px] tracking-[0.45px] text-center pb-[10px] md:pb-[17px]">Your trusted companion <br className="md:hidden" /> for inner peace</p>
+            <h6 className="text-[15px] md:text-[26px] font-[400] leading-[30.5px] tracking-[0.45px] pb-[4px] md:pb-[11px]">From $499</h6>
+            <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]">
+              Preorder
+            </button>
+            <Link href={""} className="text-[#FF1F00] text-[10px] md:text-[21px] font-[600] leading-[30.5px] tracking-[0.3px] underline">
+                Learn More {">"}
+            </Link>
+          </div>
 
-        <div className="flex justify-center flex-col items-center text-white">
-          <p className="text-[#FFE8BB] md:text-[27px] font-[400] text-[15px] leading-[22px] tracking-[0.45px] text-center pb-[10px] md:pb-[17px]">Your trusted companion <br className="md:hidden" /> for inner peace</p>
-          <h6 className="text-[15px] md:text-[26px] font-[400] leading-[30.5px] tracking-[0.45px] pb-[4px] md:pb-[11px]">From $499</h6>
-          <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]">
-            Preorder
-          </button>
-          <Link href={""} className="text-[#FF1F00] text-[10px] md:text-[21px] font-[600] leading-[30.5px] tracking-[0.3px] underline">
-              Learn More {">"}
-          </Link>
-        </div>
-
-        <div className="mt-[49px] md:mt-[155px] md:mb-[111px] mb-[77px]">
-          <QuoteContainer quote="The Vedas offers mantras, odes, chants,and reflections, guiding seekers toward complete liberation. Prioritising self-discovery over self-improvement, they emphasise on the transformative power of self-healing." authorName="Om Swami" />
-        </div>
+          <div className="mt-[49px] md:mt-[155px] md:mb-[111px] mb-[77px]">
+            <QuoteContainer quote="The Vedas offers mantras, odes, chants,and reflections, guiding seekers toward complete liberation. Prioritising self-discovery over self-improvement, they emphasise on the transformative power of self-healing." authorName="Om Swami" />
+          </div>
+        <div className="bg-shiva-bg absolute bg-no-repeat bg-cover inset-0 w-full h-[567px] md:h-full bg-[85%_17vw] md:bg-[right_-12vw] mix-blend-color-dodge"></div>
       </div>
 
       <AppsContainer />
 
       {/* Section 1 */}
 
-      <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[178px]">
+      <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[178px] relative">
         <div className="flex flex-col md:gap-[44px] gap-[45px]">
           <TitleContainer image={sadhanaLogo} heading="Sadhana" subHeading="Realise the Sacred 5 Vedic Rituals" />
           <LogoCard />
         </div>
         <ImageContainer tabImage={tab1} hindiLogoImage={hindiLogo1} text="Know Your Self" />
+        <div className="bg-durga-bg bg-no-repeat absolute inset-0 bg-cover h-[40%] md:h-[70%] bg-left mix-blend-color-dodge"></div>
       </div>
 
       <FeaturesContainer
@@ -277,10 +278,11 @@ that which is auspicious"/>
         </div>
       </div>
 
-      <div className="md:mt-[74px] mt-[117px] md:mb-[278px] mb-[224px]">
+      <div className="relative md:mt-[74px] mt-[117px] md:mb-[278px] mb-[224px]">
         <QuoteContainer quote="As the beautiful process of awakening unfolds,
       the oneness you experience with the universe
       becomes a permanent feature of your consciousness" authorName="Om Swami" />
+      <div className="bg-water-bg bg-no-repeat absolute inset-0 w-full h-full bg-cover"></div>
       </div>
 
       <div className="flex flex-col justify-center items-center md:mb-[117px] mb-[114px]">

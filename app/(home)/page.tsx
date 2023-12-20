@@ -282,7 +282,7 @@ that which is auspicious"/>
         <QuoteContainer quote="As the beautiful process of awakening unfolds,
       the oneness you experience with the universe
       becomes a permanent feature of your consciousness" authorName="Om Swami" />
-      <div className="bg-water-bg bg-no-repeat absolute inset-0 w-full h-full bg-cover"></div>
+      {/* <div className="bg-water-bg bg-no-repeat absolute inset-0 w-full h-full bg-cover"></div> */}
       </div>
 
       <div className="flex flex-col justify-center items-center md:mb-[117px] mb-[114px]">

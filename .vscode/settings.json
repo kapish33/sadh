@@ -4,6 +4,7 @@
         "Firestore",
         "NEXTAUTH",
         "preorder",
+        "razorpay",
         "sadhana",
         "seoconfig",
         "tailiwndconfig",

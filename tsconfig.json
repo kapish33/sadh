@@ -36,6 +36,6 @@
       "@storage/*": ["./firebase/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "source/components/Card/index.jsx", "app/checkout/Card.js"],
   "exclude": ["node_modules"]
 }

@@ -474,8 +474,24 @@ interface TitleContainerInterface {
 
 const TitleContainer: React.FC<TitleContainerInterface> = ({ image, heading, subHeading }) => {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <Image src={image} alt="Sadhana" />
+    <div className="w-full flex flex-col justify-center items-center ">
+      <div className="relative flex justify-center items-center">
+          <Image src={image} alt="Sadhana" className="relative z-10"  />
+          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 134 134" fill="none" className="absolute ">
+            <g filter="url(#filter0_f_646_220)">
+              <circle cx="67" cy="67" r="45" fill="#04C8FF"/>
+            </g>
+            <defs>
+              <filter id="filter0_f_646_220" x="0" y="0" width="134" height="134" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="11" result="effect1_foregroundBlur_646_220"/>
+              </filter>
+            </defs>
+          </svg>
+          <div className=" w-[322px] absolute h-[21px] bg-[#04C8FF] rounded-[322px] blur-[20px]">
+          </div>
+      </div>
       <h1 className="text-base-white font-open-sans text-[39px] font-[600] leading-[37px] md:tracking-[1.17px] uppercase mt-[20px] md:mt-[25px]">{heading}</h1>
       <h6 className="text-base-white text-[15px] md:text-[26px] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] font-open-sans font-[400] capitalize md:mt-[25px] mt-[28px] xl:px-[380px] lg:px-[250px] px-[60px] md:px-[150px]">{subHeading}</h6>
     </div>

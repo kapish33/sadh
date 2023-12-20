@@ -22,13 +22,9 @@ const Index: React.FC<IndexProps> = () => {
           <li><Link href="#">Our Story</Link></li>
           <li><Link href="#">Contact</Link></li>
         </ul>
-        <div className="bg-red-500" style={{
-          boxShadow: "0px 0px 9px 2px rgb(255,255,255,0.49)",
-          border: "1.121px solid #C9A25E",
-          borderRadius: "3.362px"
-        }} >
-          <p className="text-base-white font-open-sans text-[13.4px] font-[600] px-[4px]" >Preorder</p>
-        </div>
+          <button className="bg-btn h-[30px] w-[100px] md:w-[100px] md:h-[40px] bg-cover bg-no-repeat bg-center glow text-[13.44px] md:text-[16px] text-white flex justify-center items-center font-[600]">
+            Preorder
+          </button>
       </div>
     </div>
   );

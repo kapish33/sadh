@@ -23,13 +23,10 @@ const Index: React.FC<IndexProps> = () => {
           src={HomeImage.sadhanaLogo.img}
           alt={HomeImage.sadhanaLogo.alt}
         />
-        <div className="flex items-center gap-[21px]">
-        <div className="bg-red-500 rounded-xl" style={{
-          boxShadow: "0px 0px 9px 2px rgba(255,255,255,0.49)",
-          border: "2px solid #C9A25E",
-        }} >
-          <p className="text-base-white font-open-sans text-[9.56px] font-[700] px-[4px]" >Preorder</p>
-        </div>
+        <div className="flex items-center gap-[5px]">
+          <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center font-open-sans">
+            Preorder
+          </button>
           <svg
             onClick={toggleIcons}
             className="w-6 h-6 cursor-pointer my-auto text-warning-700 hover:text-warning-500"

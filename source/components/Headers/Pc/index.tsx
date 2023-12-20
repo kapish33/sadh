@@ -6,30 +6,6 @@ interface IndexProps {}
 
 const Index: React.FC<IndexProps> = () => {
   return (
-    // <div className="hidden md:block fixed bg-primary-500 opacity-90 shadow-nav-desktop w-full">
-    //   <div className="flex items-center w-screen justify-between max-w-5xl mx-auto">
-    //     <Image
-    //       src={HomeImage.sadhanaLogo.img}
-    //       alt={HomeImage.sadhanaLogo.alt}
-    //     />
-    //     <ul className="flex gap-4 items-center">
-    //       {Navigation.map((nav) => (
-    //         <Link
-    //           className={`block py-3 md-regular text-base-black `}
-    //           key={nav.path}
-    //           href={nav.path}
-    //         >
-    //           {nav.name}
-    //         </Link>
-    //       ))}
-    //       <Link href={preorder.path}>
-    //         <button className={preorder.class + " animate-pulse"}>
-    //           {preorder.name}
-    //         </button>
-    //       </Link>
-    //     </ul>
-    //   </div>
-    // </div>
     <div className="hidden bg-primary-500 opacity-90 md:flex items-center xl:px-[193px] lg:px-[113px] md:px-[20px] justify-between pt-[11px] pb-[2px] font-open-sans fixed top-0 w-full z-50">
       <div>
         <Image src="sadhana_logo.svg" alt="Sadhana" width={165} height={50} />

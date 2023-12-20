@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Index: React.FC = () => {
   return (
@@ -18,8 +19,8 @@ const Index: React.FC = () => {
           <ul className="h-full flex flex-col justify-between">
             <li>Company</li>
             <li>About</li>
-            <li>Privacy</li>
-            <li>Policy</li>
+            <li><Link href={"/privacy-policy"}>Privacy</Link></li>
+            <li><Link href={"/privacy-policy"}>Policy</Link></li>
             <li>Terms & Conditions</li>
             <li>Partner</li>
             <li>Contact Us</li>

@@ -41,6 +41,7 @@ import sadhanaBook from "../../assets/sadhanaBook.png";
 import AnimatedTab from "../../assets/tab_gif.gif";
 import QuoteContainer from "@components/Quote";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default async function Home() {
   const user = await getServerSession(authOptions);
@@ -48,8 +49,8 @@ export default async function Home() {
   return (
     <section className="font-open-sans">
       {/* Hero Part */}
-      <div className="flex md:flex-row flex-col-reverse justify-center items-center w-full h-fit md:h-screen md:gap-[72px] mt-[53px] md:mt-0 mb-[19px] md:mb-0">
-        <div className="flex flex-col gap-[18px] md:gap-[51px] items-center mt-[-30%] md:mt-0">
+      <div className="flex md:flex-row flex-col-reverse justify-center items-center w-full h-fit md:h-screen pt-[73px] md:pt-0 md:gap-[72px] mt-[53px] md:mt-0 mb-[150px] md:mb-0">
+        <div className="flex flex-col gap-[18px] md:gap-[100px] items-center mt-[-30%] md:mt-0">
           <h1 className="font-open-sans text-base-white text-[37px] md:text-[59px] font-[300] md:leading-[55px] tracking-[0.37px] md:tracking-[0.59px] md:text-left text-center">
             Your Sacred<br />Digital Altar, Awaits
           </h1>
@@ -63,12 +64,9 @@ export default async function Home() {
       </div>
 
       {/* Animated Tab */}
-      <div className="flex justify-center items-center mb-[58px] md:mb-[165px] w-full">
-          <Image src={AnimatedTab} alt="Tab" className="w-full md:w-[70%]" />
-      </div>
 
       <div className="flex justify-center items-center flex-col gap-[10px]">
-        <h1 className="text-base-white px-[70px] md:px-0 text-center capitalize font-open-sans text-[37px] md:text-[48px] font-[300] leading-[55px] tracking-[0.37px] md:tracking-[0.48px] md:mb-[20px]">
+        <h1 className="text-base-white px-[70px] md:px-0 text-center capitalize font-open-sans text-[37px] md:text-[48px] font-[300] leading-[55px] tracking-[0.37px] md:tracking-[0.48px] mb-[20px] md:mb-0">
           Welcome to sadhana Tablet
         </h1>
 
@@ -80,34 +78,49 @@ export default async function Home() {
             text-center
             md:text-2xl
             font-open-sans
-            font-[400]
-            uppercase
+            font-[300]
             leading-[24px]
             tracking-[0.45px]
             md:leading-[38px]
-            md:mx-[230px]
-            md:px-[65px]
-            md:tracking-wide"
+            md:tracking-[0.72px]"
         >
-          <p>Vedic wisdom meets modern ease
-Elevate your spiritual with sacred sadhanas, e-books, music, podcasts and meditations</p>
+          <p>Vedic wisdom meets modern ease <br />
+              Elevate your spiritual with sacred sadhanas, e-books, <br className="md:hidden" /> music, podcasts <br className="hidden md:block" /> and meditations
+          </p>
         </div>
 
-        <Image alt="" width={885} height={534} src={shivaTableOne} />
+        <div className="flex justify-center items-center w-full">
+          <Image src={AnimatedTab} alt="Tab" className="w-full md:w-[65%]" />
+      </div>
         <p
           className="
           text-base-white
           text-lg
-          font-semibold
-          text-[11px]
-          md:text-[18px]
+          font-[400]
+          !text-[11px]
+          md:!text-[18px]
+          mt-[-8%]
+          md:mt-[-4%]
           font-open-sans
           capitalize
           leading-[38px]
-          tracking-[0.33px]"
+          tracking-[0.33px]
+          mb-[91px]
+          md:mb-[63px]"
         >
           Crafted By OM Swami
         </p>
+
+        <div className="flex justify-center flex-col items-center text-white">
+          <p className="text-[#FFE8BB] md:text-[27px] font-[400] text-[15px] leading-[22px] tracking-[0.45px] text-center pb-[10px] md:pb-[17px]">Your trusted companion <br className="md:hidden" /> for inner peace</p>
+          <h6 className="text-[15px] md:text-[26px] font-[400] leading-[30.5px] tracking-[0.45px] pb-[4px] md:pb-[11px]">From $499</h6>
+          <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]">
+            Preorder
+          </button>
+          <Link href={""} className="text-[#FF1F00] text-[10px] md:text-[21px] font-[600] leading-[30.5px] tracking-[0.3px] underline">
+              Learn More {">"}
+          </Link>
+        </div>
 
         <div className="mt-[49px] md:mt-[155px] md:mb-[111px] mb-[77px]">
           <QuoteContainer quote="The Vedas offers mantras, odes, chants,and reflections, guiding seekers toward complete liberation. Prioritising self-discovery over self-improvement, they emphasise on the transformative power of self-healing." authorName="Om Swami" />
@@ -242,7 +255,7 @@ that which is auspicious"/>
 
       <div className="flex flex-col justify-center items-center md:mt-[88px] mt-[117px]">
         <div className="h-[220px] w-[210px] bg-sadhana-background-logo flex justify-center items-center relative">
-        <svg xmlns="http://www.w3.org/2000/svg" width="286" height="54" viewBox="0 0 286 54" fill="none" className="absolute md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="286" height="54" viewBox="0 0 286 54" fill="none" className="absolute">
                 <g filter="url(#filter0_f_181_13)">
                 <ellipse cx="143" cy="27" rx="122" ry="6" fill="#00C7FF"/>
                 </g>
@@ -264,7 +277,7 @@ that which is auspicious"/>
         </div>
       </div>
 
-      <div className="md:mt-[74px] mt-[63px] md:mb-[278px] mb-[146px]">
+      <div className="md:mt-[74px] mt-[117px] md:mb-[278px] mb-[224px]">
         <QuoteContainer quote="As the beautiful process of awakening unfolds,
       the oneness you experience with the universe
       becomes a permanent feature of your consciousness" authorName="Om Swami" />
@@ -294,8 +307,8 @@ that which is auspicious"/>
         />
       </div>
 
-      <div className="flex w-full bg-[#ffffff99]">
-          <div className="w-[45vw] flex flex-col justify-center items-start md:pl-[195px] md:gap-[50px]">
+      <div className="flex flex-col md:flex-row w-full bg-[#ffffff99] justify-center items-center">
+          <div className="w-[45vw] md:flex flex-col justify-center items-start md:pl-[195px] md:gap-[50px] hidden">
               <h3 className="text-[#0292B5] font-[Open Sans] md:text-[56px] font-[600] md:leading-[59.5px] md:tracking-[1.68px] uppercase">
                 Offer A Gift Of Dharma To Your Loved Ones 
               </h3>
@@ -303,11 +316,18 @@ that which is auspicious"/>
                   <p className="text-base-white md:text-[25px] font-[Open Sans] font-[600] md:leading-[30.5px] md:tracking-[0.75px]">Preorder</p>
               </div>
           </div>
-          <div className="w-[55vw] flex items-end justify-end">
+          <p className="text-[#0292B5] text-[36px] font-[600] leading-[39px] uppercase text-center mt-[37px] md:hidden">
+          Offer A Gift <br />
+          Of Dharma To <br />
+          Your Loved Ones 
+          </p>
+          <div className="md:w-[55vw] flex items-end justify-end">
               <Image src={sadhanaBook} alt=""/>
           </div>
+          <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[52px] !mt-[26px]">
+            Preorder
+          </button>
       </div>
-
     </section>
   );
 }
@@ -353,10 +373,10 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
                 <div className="w-full md:w-[21%] flex justify-center items-center">
                     <Image src={fLogo1} alt="" />
                   </div>
-                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0">
-                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px] capitalize">{fHeading1}</h6>
+                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0 mt-[12px] md:mt-0">
+                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px]">{fHeading1}</h6>
                     <p 
-                    className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 text-center md:text-start md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] capitalize text-center md:text-start px-[85px] md:px-0`}
+                    className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 text-center md:text-start md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:!tracking-[0.75px] text-center md:text-start px-[85px] md:px-0`}
                     >
                       {fSubHeading1}
                     </p>
@@ -373,9 +393,9 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
                       // height: '70px'
                     }} />
                   </div>
-                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0">
-                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px] capitalize">{fHeading2}</h6>
-                    <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] capitalize text-center md:text-start px-[85px] md:px-0`}>{fSubHeading2}
+                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0 mt-[12px] md:mt-0">
+                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px]">{fHeading2}</h6>
+                    <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] text-center md:text-start px-[85px] md:px-0`}>{fSubHeading2}
                     </p>
                 </div>
             </div>
@@ -388,9 +408,9 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
                 <div className="w-full md:w-[21%] flex justify-center items-center">
                     <Image src={fLogo3} alt="" />
                   </div>
-                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0">
-                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px] capitalize">{fHeading3}</h6>
-                    <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] capitalize text-center md:text-start px-[85px] md:px-0`}>{fSubHeading3}
+                  <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0 mt-[12px] md:mt-0">
+                    <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px]">{fHeading3}</h6>
+                    <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] text-center md:text-start px-[85px] md:px-0`}>{fSubHeading3}
                     </p>
                 </div>
             </div>
@@ -402,9 +422,9 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
                   <div className="w-full md:w-[21%] flex justify-center items-center">
                       <Image src={fLogo4} alt="" className="" />
                     </div>
-                    <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0">
-                      <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px] capitalize">{fHeading4}</h6>
-                      <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] capitalize text-center md:text-start px-[85px] md:px-0`}>{fSubHeading4}
+                    <div className="w-full flex flex-col items-center md:items-start justify-center gap-[6px] md:gap-0 mt-[12px] md:mt-0">
+                      <h6 className="text-[#FFE6BB] text-[24.9px] md:text-[24px] font-[600] font-[Open Sans] leading-[37px] md:tracking-[0.72px]">{fHeading4}</h6>
+                      <p className={subHeadingStyle ? "text-base-white text-[15px] leading-[20px] px-[85px] md:px-0 md:text-start text-center md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px]" : `text-base-white text-[15px] md:text-[17px] font-[400] leading-[23px] md:tracking-[0.51px] text-center md:text-start px-[85px] md:px-0`}>{fSubHeading4}
                       </p>
                   </div>
               </div>
@@ -417,7 +437,7 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
 
 const AppsContainer: React.FC = () => {
   return (
-    <div className="h-fit bg-[#04284380] flex flex-col justify-center items-center  pt-[28px] pb-[25px] md:pt-[34px] md:pb-[55px]">
+    <div className="h-fit bg-[#042843] flex flex-col justify-center items-center  pt-[28px] pb-[25px] md:pt-[34px] md:pb-[55px]">
       <div className="flex flex-col gap-[29px] md:gap-[10px] md:mb-[50px] mb-[31px]">
         <h1 className="text-[#FFE8BB] text-center font-[Open Sens] text-[26px] md:text-[45px] font-[300] leading-[37px] tracking-[0.78px] md:tracking-[1.35px] capitalize px-[90px] md:px-0">Four Pre Installed Apps I Offerings</h1>
         <h5 className="text-base-white text-[15px] md:text-[26px] font-[300] leading-[18.5px] tracking-[0.45px] text-center md:leading-[37px] md:tracking-[0.78px] px-[50px] md:px-0">Your gateway to secluded sadhana with apps for spiritual enrichment </h5>
@@ -456,8 +476,8 @@ const TitleContainer: React.FC<TitleContainerInterface> = ({ image, heading, sub
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <Image src={image} alt="Sadhana" />
-      <h1 className="text-base-white font-open-sans text-[39px] font-[600] leading-[37px] md:tracking-[1.17px] uppercase mt-[12px]">{heading}</h1>
-      <h6 className="text-base-white text-[15px] md:text-[26px] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] font-open-sans font-[400] capitalize md:mt-[5px] mt-[6px] px-[65px] xl:px-[380px] lg:px-[250px] md:px-[150px]">{subHeading}</h6>
+      <h1 className="text-base-white font-open-sans text-[39px] font-[600] leading-[37px] md:tracking-[1.17px] uppercase mt-[20px] md:mt-[25px]">{heading}</h1>
+      <h6 className="text-base-white text-[15px] md:text-[26px] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] font-open-sans font-[400] capitalize md:mt-[25px] mt-[28px] xl:px-[380px] lg:px-[250px] px-[60px] md:px-[150px]">{subHeading}</h6>
     </div>
   );
 }
@@ -473,7 +493,7 @@ const ImageContainer: React.FC<ImageContainerInterface> = ({ tabImage, hindiLogo
     <div className="flex flex-col justify-center items-center md:pb-[63px] pb-[66px]">
       <Image src={tabImage} alt="Tab" className="md:mt-[-5%]" />
       <Image src={hindiLogoImage} alt="" className="md:mt-[-10%] px-[82px] md:px-0" />
-      <h5 className="md:text-[26px] text-[15px] text-base-white font-[600] leading-[37px] md:tracking-[0.78px] tracking-[0.45px] capitalize ">{text}</h5>
+      <h5 className="md:text-[26px] text-[15px] text-base-white font-[600] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] px-[82px] ">{text}</h5>
     </div>
   );
 }
@@ -502,7 +522,7 @@ const Card: React.FC<CardInterface> = ({ text, imageUrl }) => {
   return (
     <div className='flex flex-col justify-center items-center'>
       <Image src={imageUrl} alt={text} />
-      <h5 className='text-base-white text-[15px] md:text-[18px] font-open-sans font-[400] md:leading-[37px] md:tracking-[0.54px] capitalize '>{text}</h5>
+      <h5 className='text-base-white text-[15px] md:text-[18px] font-open-sans font-[400] md:leading-[37px] md:tracking-[0.54px] '>{text}</h5>
     </div>
   );
 }

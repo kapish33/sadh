@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const Index: React.FC = () => {
-    return <footer className=" md:hidden lg:hidden xl:hidden visible text-base-white bg-[#001d2d45] pt-[100px] pb-[150px]">
+    return <footer className=" md:hidden lg:hidden xl:hidden visible text-base-white bg-[#001d2d45] pt-[150px] pb-[150px]">
 
         {/* <div className="px-[40px] flex justify-center flex-col items-end pb-[204px]">
 
@@ -18,7 +18,7 @@ const Index: React.FC = () => {
       {/* Footer center part */}
       <div className="flex flex-col justify-center items-center mb-[199px]">
         <Image src={"/sadhana_main_logo.png"} alt="Sadhana" width={135} height={129} />
-        <p className="mt-[12px] text-[15px] uppercase font-open-sans font-[300] leading-[50px] tracking-[3.8px]">A VEDIC SADHANA FOUNDATION</p>
+        <p className="mt-[12px] text-[15px] uppercase font-open-sans font-[300] leading-[60px] tracking-[3.8px]">A VEDIC SADHANA FOUNDATION</p>
         <p className="text-[15px] uppercase font-open-sans font-[300] leading-[50px] tracking-[3.8px] mt-[-29px]">Initiative</p>
       </div>
 

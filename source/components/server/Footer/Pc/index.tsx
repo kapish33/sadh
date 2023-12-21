@@ -55,8 +55,11 @@ const Index: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
             <p>nonummy nibh euismod tincidunt ut laoreet dolore magna ali- quam erat volutpat. Ut wisi enim ad e</p>
           </div>
-          <div className="flex justify-end px-[18px] w-full gap-[22px]">
-            <p>+91 99988223334</p>
+          <div className="flex justify-between w-full gap-[22px]">
+            <div className="flex gap-[10px]">
+              <p>REACH US AT :</p>
+              <p>+91 99988223334</p>
+            </div>
             <p className="underline">sadhana.app@tempmail.com</p>
           </div>
         </div>

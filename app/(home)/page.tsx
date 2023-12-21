@@ -64,7 +64,7 @@ export default async function Home() {
       </div>
 
       {/* Animated Tab */}
-        <div className="flex justify-center items-center flex-col gap-[10px] relative">
+        <div className="flex justify-center items-center flex-col gap-[10px] relative md:pt-[165px]">
           <h1 className="text-base-white px-[70px] md:px-0 text-center capitalize font-open-sans text-[37px] md:text-[48px] font-[300] leading-[55px] tracking-[0.37px] md:tracking-[0.48px] mb-[20px] md:mb-0">
             Welcome to sadhana Tablet
           </h1>
@@ -124,7 +124,7 @@ export default async function Home() {
           <div className="mt-[49px] md:mt-[155px] md:mb-[111px] mb-[77px]">
             <QuoteContainer quote="The Vedas offers mantras, odes, chants,and reflections, guiding seekers toward complete liberation. Prioritising self-discovery over self-improvement, they emphasise on the transformative power of self-healing." authorName="Om Swami" />
           </div>
-        <div className="bg-shiva-bg absolute bg-no-repeat bg-cover inset-0 w-full h-[567px] md:h-full bg-[85%_17vw] md:bg-[right_-12vw] mix-blend-color-dodge"></div>
+        <div className="bg-shiva-bg absolute bg-no-repeat bg-cover inset-0 h-[567px] w-full md:h-[1252px] bg-[85%_17vw] md:bg-[right_-15vw] mix-blend-color-dodge"></div>
       </div>
 
       <AppsContainer />
@@ -234,6 +234,8 @@ only
 that which is auspicious"/>
       </div>
 
+      <div className="relative">
+
       <FeaturesContainer
         fLogo1={featureLogo5}
         fLogo2={featureLogo7}
@@ -254,38 +256,37 @@ that which is auspicious"/>
         Reference with easy access"
       />
 
-      <div className="flex flex-col justify-center items-center md:mt-[88px] mt-[117px]">
-        <div className="h-[220px] w-[210px] bg-sadhana-background-logo flex justify-center items-center relative">
-        <svg xmlns="http://www.w3.org/2000/svg" width="286" height="54" viewBox="0 0 286 54" fill="none" className="absolute">
-                <g filter="url(#filter0_f_181_13)">
-                <ellipse cx="143" cy="27" rx="122" ry="6" fill="#00C7FF"/>
-                </g>
-                <defs>
-                <filter id="filter0_f_181_13" x="0" y="0" width="286" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur_181_13"/>
-                </filter>
-                </defs>
-            </svg>
-          <div className="bg-none bg-[#F11D00] rounded-[9.44px] border-2 border-[#CC7A00] md:border-none md:bg-transparent md:bg-btn md:w-[175px] w-[124px] md:h-[63px] h-[33px] flex justify-center items-center z-10 md:!shadow-none
-          " style={{
-            boxShadow: "0px 0px 9px 2px rgba(255, 255, 255, 0.49)"
-          }}>
-            <p className="text-base-white font-[Open Sans] md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px] capitalize">Preorder</p>
+        <div className="flex flex-col justify-center items-center md:mt-[88px] mt-[117px]">
+          <div className="h-[220px] w-[210px] bg-sadhana-background-logo flex justify-center items-center relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="286" height="54" viewBox="0 0 286 54" fill="none" className="absolute">
+                  <g filter="url(#filter0_f_181_13)">
+                  <ellipse cx="143" cy="27" rx="122" ry="6" fill="#00C7FF"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_f_181_13" x="0" y="0" width="286" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur_181_13"/>
+                  </filter>
+                  </defs>
+              </svg>
+            <div className="bg-none bg-[#F11D00] rounded-[9.44px] border-2 border-[#CC7A00] md:border-none md:bg-transparent md:bg-btn md:w-[175px] w-[124px] md:h-[63px] h-[33px] flex justify-center items-center z-10 md:!shadow-none
+            " style={{
+              boxShadow: "0px 0px 9px 2px rgba(255, 255, 255, 0.49)"
+            }}>
+              <p className="text-base-white font-[Open Sans] md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px] capitalize">Preorder</p>
+            </div>
+
           </div>
-
         </div>
+        <div className="md:mt-[74px] mt-[117px] md:pb-[158px] pb-[71px]">
+          <QuoteContainer quote="As the beautiful process of awakening unfolds,
+        the oneness you experience with the universe
+        becomes a permanent feature of your consciousness" authorName="Om Swami" />
+        </div>
+        <div className="absolute bottom-0 w-full h-[346px] md:h-[799px] bg-center bg-water-bg bg-no-repeat bg-cover mix-blend-color-dodge"></div>
       </div>
-
-      <div className="relative md:mt-[74px] mt-[117px] md:mb-[278px] mb-[224px]">
-        <QuoteContainer quote="As the beautiful process of awakening unfolds,
-      the oneness you experience with the universe
-      becomes a permanent feature of your consciousness" authorName="Om Swami" />
-      {/* <div className="bg-water-bg bg-no-repeat absolute inset-0 w-full h-full bg-cover"></div> */}
-      </div>
-
-      <div className="flex flex-col justify-center items-center md:mb-[117px] mb-[114px]">
+      {/* <div className="flex flex-col justify-center items-center md:mb-[117px] mb-[114px]">
         <div className="flex flex-col justify-center items-center gap-[33px] md:gap-0 mb-[33px] md:mb-0">
           <h5 className="text-base-white text-[22.3px] md:text-[39px] font-[Open Sans] font-[600] leading-[26.6px] md:leading-[37px] md:tracking-[1.17px] uppercase">know your tablet</h5>
           <Image src={tab5} alt="Tab" className="md:mr-[-10%] hidden md:block" />
@@ -307,7 +308,7 @@ that which is auspicious"/>
           reality."
           subHeadingStyle
         />
-      </div>
+      </div> */}
 
       <div className="flex flex-col md:flex-row w-full bg-[#ffffff99] justify-center items-center">
           <div className="w-[45vw] md:flex flex-col justify-center items-start md:pl-[195px] md:gap-[50px] hidden">
@@ -494,7 +495,11 @@ const TitleContainer: React.FC<TitleContainerInterface> = ({ image, heading, sub
           <div className=" w-[322px] absolute h-[21px] bg-[#04C8FF] rounded-[322px] blur-[20px]">
           </div>
       </div>
-      <h1 className="text-base-white font-open-sans text-[39px] font-[600] leading-[37px] md:tracking-[1.17px] uppercase mt-[20px] md:mt-[25px]">{heading}</h1>
+      <div className="relative flex justify-center items-center">
+        <h1 className="text-base-white font-open-sans text-[39px] font-[600] leading-[37px] md:tracking-[1.17px] uppercase mt-[20px] md:mt-[25px]">{heading}</h1>
+        <div className="absolute w-[293px] md:w-[333px] h-[37px] md:h-[42px] bg-[#04C8FF4D] rounded-[293px]
+        mt-[20px] md:mt-[25px] blur-[11px]"></div>
+      </div>
       <h6 className="text-base-white text-[15px] md:text-[26px] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] font-open-sans font-[400] capitalize md:mt-[25px] mt-[28px] xl:px-[380px] lg:px-[250px] px-[60px] md:px-[150px]">{subHeading}</h6>
     </div>
   );

@@ -19,8 +19,7 @@ const Index: React.FC = () => {
           <ul className="h-full flex flex-col justify-between">
             <li>Company</li>
             <li>About</li>
-            <li><Link href={"/privacy-policy"}>Privacy</Link></li>
-            <li><Link href={"/privacy-policy"}>Policy</Link></li>
+            <li><Link href={"/privacy-policy"}>Privacy Policy</Link></li>
             <li>Terms & Conditions</li>
             <li>Partner</li>
             <li>Contact Us</li>

@@ -9,7 +9,7 @@ interface IndexProps {}
 const Index: React.FC<IndexProps> = () => {
   const router = useRouter();
   return (
-    <div className="hidden bg-primary-500 opacity-90 md:flex items-center xl:px-[193px] lg:px-[113px] md:px-[20px] justify-between pt-[11px] pb-[2px] font-open-sans fixed top-0 w-full z-50">
+    <div id="header" className="hidden bg-primary-500 opacity-90 md:flex items-center xl:px-[193px] lg:px-[113px] md:px-[20px] justify-between pt-[11px] pb-[2px] font-open-sans fixed top-0 w-full z-50">
       <div onClick={() => router.push("/")}>
         <Image src="sadhana_logo.svg" alt="Sadhana" width={165} height={50} />
       </div>

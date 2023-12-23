@@ -45,6 +45,10 @@ type BackgroundImage = {
     {
       name: "water-bg",
       url: "../assets/water-bg.png"
+    },
+    {
+      name: "white-bg",
+      url: "../assets/white-bg-product.png"
     }
   ];
   

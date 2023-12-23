@@ -3,6 +3,8 @@ import "../globals.scss";
 import Headers from "@components/Headers";
 import { montserrat, openSans, tiroGurmukhi, roboto, inter } from "@config/fonts";
 import Script from "next/script";
+import Image from "next/image";
+import ScrollToTop from "@/source/components/ScrollToTop";
 export { universalMetaData as metadata } from "@seoconfig/universal";
 
 export default function RootLayout({
@@ -18,6 +20,7 @@ export default function RootLayout({
           <Headers />
           {children}
           <Footer />
+          <ScrollToTop />
         </div>
       </body>
     </html>

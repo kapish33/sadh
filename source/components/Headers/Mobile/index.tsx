@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { HomeImage } from "@/assets/home";
 import { usePathname, useRouter } from "next/navigation";
+import hamburgerWhite from "@/assets/hamburger-white.png"
+import hamburgerOrgange from "@/assets/Hamburger-orange.png"
 
 interface IndexProps {}
 
@@ -18,7 +20,7 @@ const Index: React.FC<IndexProps> = () => {
   };
 
   return (
-    <nav className={`md:hidden visible bg-primary-500 fixed w-full top-0 z-50`}>
+    <nav id="header" className={`md:hidden visible bg-primary-500 fixed w-full top-0 z-20`}>
       <div className="flex justify-between px-[24px] py-[12px]">
         <Image
           src={HomeImage.sadhanaLogo.img}
@@ -29,45 +31,40 @@ const Index: React.FC<IndexProps> = () => {
           <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center font-open-sans" onClick={() => router.push("/preorder")}>
             Preorder
           </button>
-          <svg
-            onClick={toggleIcons}
-            className="w-6 h-6 cursor-pointer my-auto text-warning-700 hover:text-warning-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="3"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          <Image src={hamburgerWhite} alt="" onClick={toggleIcons} width={35} height={35}/>
         </div>
       </div>
-
-      {iconsVisible && (
-        <div
-          onClick={toggleIcons}
-          onScroll={toggleIcons}
-          className="text-right px-[24px] bg-gradient-to-b h-screen from-primary-600/40 from-10% via-primary-600/70 via-30% to-primary-600/50 to-90%"
-        >
-          {Navigation.map((nav) => (
-            <Link
-              className={`block py-3 md-regular ${
-                route === nav.path
-                  ? "text-warning-700 font-bold"
-                  : "text-base-white"
-              }`}
-              key={nav.path}
-              href={nav.path}
-            >
-              {nav.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      {
+        iconsVisible && (
+          <div className="h-screen absolute top-0 w-full bg-main">
+            <div className="relative w-full h-full">
+              <div className="flex justify-end px-[24px] py-[17px] z-50" onClick={toggleIcons}
+              onScroll={toggleIcons}>
+                <Image src={hamburgerOrgange} alt="Menu" height={35} width={35}/>
+              </div>
+              <div className="px-[38px]">
+                {Navigation.map((nav) => (
+                    <Link
+                      className={`block py-3 md-regular ${
+                        route === nav.path
+                          ? "!text-warning-700 font-bold"
+                          : "text-base-white"
+                      } text-[28px] font-open-sans font-semibold pb-[31px]`}
+                      style={{
+                        textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+                      }}
+                      key={nav.path}
+                      href={nav.path}
+                    >
+                      {nav.name}
+                    </Link>
+                  ))}
+              </div>
+              <div className="absolute top-0 bg-shiva-bg bg-cover w-full h-full bg-[93%_-42vw] mix-blend-color-dodge opacity-[0.5] z-10 pointer-events-none"></div>
+            </div>
+          </div>
+        )
+      }
     </nav>
   );
 };

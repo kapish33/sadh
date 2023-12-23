@@ -124,7 +124,7 @@ export default async function Home() {
           <div className="mt-[49px] md:mt-[155px] md:mb-[111px] mb-[77px]">
             <QuoteContainer quote="The Vedas offers mantras, odes, chants,and reflections, guiding seekers toward complete liberation. Prioritising self-discovery over self-improvement, they emphasise on the transformative power of self-healing." authorName="Om Swami" />
           </div>
-        <div className="bg-shiva-bg absolute bg-no-repeat bg-cover inset-0 h-[567px] w-full md:h-[1252px] bg-[85%_17vw] md:bg-[right_-15vw] mix-blend-color-dodge"></div>
+        <div className="bg-shiva-bg absolute bg-no-repeat bg-cover inset-0 h-[567px] w-full md:h-[1252px] bg-[85%_-32vw] md:bg-[right_-15vw] mix-blend-color-dodge"></div>
       </div>
 
       <AppsContainer />

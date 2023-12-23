@@ -4,13 +4,14 @@ import { Navigation, preorder } from "../const";
 import Link from "next/link";
 import Image from "next/image";
 import { HomeImage } from "@/assets/home";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface IndexProps {}
 
 const Index: React.FC<IndexProps> = () => {
   const [iconsVisible, setIconsVisible] = useState(false);
   const route = usePathname();
+  const router = useRouter();
 
   const toggleIcons = () => {
     setIconsVisible(!iconsVisible);
@@ -22,9 +23,10 @@ const Index: React.FC<IndexProps> = () => {
         <Image
           src={HomeImage.sadhanaLogo.img}
           alt={HomeImage.sadhanaLogo.alt}
+          onClick={() => router.push("/")}
         />
         <div className="flex items-center gap-[5px]">
-          <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center font-open-sans">
+          <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center font-open-sans" onClick={() => router.push("/preorder")}>
             Preorder
           </button>
           <svg

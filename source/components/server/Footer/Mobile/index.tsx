@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Index: React.FC = () => {
     return <footer className=" md:hidden lg:hidden xl:hidden visible text-base-white bg-[#001d2d45] pt-[150px] pb-[41px]">
@@ -16,8 +17,8 @@ const Index: React.FC = () => {
                     <ul className="h-full flex flex-col justify-between">
                         <li>Company</li>
                         <li>About</li>
-                        <li>Privacy</li>
-                        <li>Policy</li>
+                        <li><Link href={"/privacy-policy"}>Privacy</Link></li>
+                        <li><Link href={"/privacy-policy"}>Policy</Link></li>
                         <li>Terms & Conditions</li>
                         <li>Partner</li>
                         <li>Contact Us</li>

@@ -1,13 +1,16 @@
+"use client";
 import { HomeImage } from "@/assets/home";
 import Image from "next/image";
 import Link from "next/link";
 import { Navigation, preorder } from "../const";
+import { useRouter } from "next/navigation";
 interface IndexProps {}
 
 const Index: React.FC<IndexProps> = () => {
+  const router = useRouter();
   return (
     <div className="hidden bg-primary-500 opacity-90 md:flex items-center xl:px-[193px] lg:px-[113px] md:px-[20px] justify-between pt-[11px] pb-[2px] font-open-sans fixed top-0 w-full z-50">
-      <div>
+      <div onClick={() => router.push("/")}>
         <Image src="sadhana_logo.svg" alt="Sadhana" width={165} height={50} />
       </div>
       <div className="flex justify-center items-center md:gap-[52px] lg:gap-[72px]">
@@ -22,7 +25,7 @@ const Index: React.FC<IndexProps> = () => {
           <li><Link href="#">Our Story</Link></li>
           <li><Link href="#">Contact</Link></li>
         </ul>
-          <button className="bg-btn h-[30px] w-[100px] md:w-[100px] md:h-[40px] bg-cover bg-no-repeat bg-center glow text-[13.44px] md:text-[16px] text-white flex justify-center items-center font-[600]">
+          <button className="bg-btn h-[30px] w-[100px] md:w-[100px] md:h-[40px] bg-cover bg-no-repeat bg-center glow text-[13.44px] md:text-[16px] text-white flex justify-center items-center font-[600]" onClick={() => router.push("/preorder")}>
             Preorder
           </button>
       </div>

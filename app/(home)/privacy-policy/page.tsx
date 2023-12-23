@@ -2,8 +2,8 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <>
-            <h1>Privacy Policy</h1>
+        <div className='py-[20vw] md:py-[5vw] px-[20px] text-white'>
+            <h1 className='text-[#FFE8BA]'>Privacy Policy</h1>
             <p>Last updated: December 18, 2023</p>
             <p>
                 This Privacy Policy describes Our policies and procedures on the collection,
@@ -23,14 +23,14 @@ const PrivacyPolicy = () => {
                 </a>
                 .
             </p>
-            <h2>Interpretation and Definitions</h2>
-            <h3>Interpretation</h3>
+            <h2 className='text-[#FFE8BA]'>Interpretation and Definitions</h2>
+            <h3 className='text-[#FFE8BA]'>Interpretation</h3>
             <p>
                 The words of which the initial letter is capitalized have meanings defined
                 under the following conditions. The following definitions shall have the
                 same meaning regardless of whether they appear in singular or in plural.
             </p>
-            <h3>Definitions</h3>
+            <h3 className='text-[#FFE8BA]'>Definitions</h3>
             <p>For the purposes of this Privacy Policy:</p>
             <ul>
                 <li>
@@ -121,9 +121,9 @@ const PrivacyPolicy = () => {
                     </p>
                 </li>
             </ul>
-            <h2>Collecting and Using Your Personal Data</h2>
-            <h3>Types of Data Collected</h3>
-            <h4>Personal Data</h4>
+            <h2 className='text-[#FFE8BA]'>Collecting and Using Your Personal Data</h2>
+            <h3 className='text-[#FFE8BA]'>Types of Data Collected</h3>
+            <h4 className='text-[#FFE8BA]'>Personal Data</h4>
             <p>
                 While using Our Service, We may ask You to provide Us with certain
                 personally identifiable information that can be used to contact or identify
@@ -143,7 +143,7 @@ const PrivacyPolicy = () => {
                     <p>Usage Data</p>
                 </li>
             </ul>
-            <h4>Usage Data</h4>
+            <h4 className='text-[#FFE8BA]'>Usage Data</h4>
             <p>Usage Data is collected automatically when using the Service.</p>
             <p>
                 Usage Data may include information such as Your Device&apos;s Internet Protocol
@@ -163,7 +163,7 @@ const PrivacyPolicy = () => {
                 We may also collect information that Your browser sends whenever You visit
                 our Service or when You access the Service by or through a mobile device.
             </p>
-            <h4>Tracking Technologies and Cookies</h4>
+            <h4 className='text-[#FFE8BA]'>Tracking Technologies and Cookies</h4>
             <p>
                 We use Cookies and similar tracking technologies to track the activity on
                 Our Service and store certain information. Tracking technologies used are
@@ -252,7 +252,7 @@ const PrivacyPolicy = () => {
                 cookies, please visit our Cookies Policy or the Cookies section of our
                 Privacy Policy.
             </p>
-            <h3>Use of Your Personal Data</h3>
+            <h3 className='text-[#FFE8BA]'>Use of Your Personal Data</h3>
             <p>The Company may use Personal Data for the following purposes:</p>
             <ul>
                 <li>
@@ -356,7 +356,7 @@ const PrivacyPolicy = () => {
                     information for any other purpose with Your consent.
                 </li>
             </ul>
-            <h3>Retention of Your Personal Data</h3>
+            <h3 className='text-[#FFE8BA]'>Retention of Your Personal Data</h3>
             <p>
                 The Company will retain Your Personal Data only for as long as is necessary
                 for the purposes set out in this Privacy Policy. We will retain and use Your
@@ -372,7 +372,7 @@ const PrivacyPolicy = () => {
                 of Our Service, or We are legally obligated to retain this data for longer
                 time periods.
             </p>
-            <h3>Transfer of Your Personal Data</h3>
+            <h3 className='text-[#FFE8BA]'>Transfer of Your Personal Data</h3>
             <p>
                 Your information, including Personal Data, is processed at the Company&apos;s
                 operating offices and in any other places where the parties involved in the
@@ -392,7 +392,7 @@ const PrivacyPolicy = () => {
                 country unless there are adequate controls in place including the security
                 of Your data and other personal information.
             </p>
-            <h3>Delete Your Personal Data</h3>
+            <h3 className='text-[#FFE8BA]'>Delete Your Personal Data</h3>
             <p>
                 You have the right to delete or request that We assist in deleting the
                 Personal Data that We have collected about You.
@@ -412,21 +412,21 @@ const PrivacyPolicy = () => {
                 Please note, however, that We may need to retain certain information when we
                 have a legal obligation or lawful basis to do so.
             </p>
-            <h3>Disclosure of Your Personal Data</h3>
-            <h4>Business Transactions</h4>
+            <h3 className='text-[#FFE8BA]'>Disclosure of Your Personal Data</h3>
+            <h4 className='text-[#FFE8BA]'>Business Transactions</h4>
             <p>
                 If the Company is involved in a merger, acquisition or asset sale, Your
                 Personal Data may be transferred. We will provide notice before Your
                 Personal Data is transferred and becomes subject to a different Privacy
                 Policy.
             </p>
-            <h4>Law enforcement</h4>
+            <h4 className='text-[#FFE8BA]'>Law enforcement</h4>
             <p>
                 Under certain circumstances, the Company may be required to disclose Your
                 Personal Data if required to do so by law or in response to valid requests
                 by public authorities (e.g. a court or a government agency).
             </p>
-            <h4>Other legal requirements</h4>
+            <h4 className='text-[#FFE8BA]'>Other legal requirements</h4>
             <p>
                 The Company may disclose Your Personal Data in the good faith belief that
                 such action is necessary to:
@@ -440,14 +440,14 @@ const PrivacyPolicy = () => {
                 <li>Protect the personal safety of Users of the Service or the public</li>
                 <li>Protect against legal liability</li>
             </ul>
-            <h3>Security of Your Personal Data</h3>
+            <h3 className='text-[#FFE8BA]'>Security of Your Personal Data</h3>
             <p>
                 The security of Your Personal Data is important to Us, but remember that no
                 method of transmission over the Internet, or method of electronic storage is
                 100% secure. While We strive to use commercially acceptable means to protect
                 Your Personal Data, We cannot guarantee its absolute security.
             </p>
-            <h2>Children&apos;s Privacy</h2>
+            <h2 className='text-[#FFE8BA]'>Children&apos;s Privacy</h2>
             <p>
                 Our Service does not address anyone under the age of 13. We do not knowingly
                 collect personally identifiable information from anyone under the age of 13.
@@ -462,7 +462,7 @@ const PrivacyPolicy = () => {
                 information and Your country requires consent from a parent, We may require
                 Your parent&apos;s consent before We collect and use that information.
             </p>
-            <h2>Links to Other Websites</h2>
+            <h2 className='text-[#FFE8BA]'>Links to Other Websites</h2>
             <p>
                 Our Service may contain links to other websites that are not operated by Us.
                 If You click on a third party link, You will be directed to that third
@@ -473,7 +473,7 @@ const PrivacyPolicy = () => {
                 We have no control over and assume no responsibility for the content,
                 privacy policies or practices of any third party sites or services.
             </p>
-            <h2>Changes to this Privacy Policy</h2>
+            <h2 className='text-[#FFE8BA]'>Changes to this Privacy Policy</h2>
             <p>
                 We may update Our Privacy Policy from time to time. We will notify You of
                 any changes by posting the new Privacy Policy on this page.
@@ -488,14 +488,14 @@ const PrivacyPolicy = () => {
                 Changes to this Privacy Policy are effective when they are posted on this
                 page.
             </p>
-            <h2>Contact Us</h2>
+            <h2 className='text-[#FFE8BA]'>Contact Us</h2>
             <p>
                 If you have any questions about this Privacy Policy, You can contact us:
             </p>
             <ul>
                 <li>By email: support@sadhanatablet.com</li>
             </ul>
-        </>
+        </div>
 
     )
 }

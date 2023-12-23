@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@assets/*": ["./assets/*"],
+      "@appString/*": ["./source/appstring/*"],
+      "@components/*": ["./source/components/*"],
+      "@config/*": ["./source/config/*"],
+      "@constants/*": ["./source/constants/*"],
+      "@customTypes/*": ["./source/customTypes/*"],
+      "@hooks/*": ["./source/hooks/*"],
+      "@images/*": ["./source/images/*"],
+      "@nativeModules/*": ["./source/nativeModules/*"],
+      "@navigation/*": ["./source/navigation/*"],
+      "@seoconfig/*": ["./seo/*"],
+      "@routes/*": ["./routes/*"],
+      "@gsheet/*": ["./googleSheetSdk/functions*"],
+      "@storage/*": ["./firebase/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "source/components/Card/index.jsx", "app/checkout/Card.js"],
+  "exclude": ["node_modules"]
+}

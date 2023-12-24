@@ -48,11 +48,11 @@ const Index: React.FC<IndexProps> = () => {
           <Image src={hamburgerWhite} alt="" onClick={() => {onOpen();}} width={35} height={35}/>
         </div>
       </div>
-      <div ref={boxRef} className="-translate-y-full absolute top-0 w-full">
+      <div ref={boxRef} className="-translate-y-full absolute top-0 w-full z-50">
         {
             <div id="mobile-header" className="h-screen w-full bg-main">
               <div className="relative w-full h-full">
-                <div className="flex justify-end px-[24px] py-[17px] z-50" onClick={() => {onClose();}}
+                <div className="flex justify-end px-[24px] py-[17px] " onClick={() => {onClose();}}
                 onScroll={() => {onClose();}}>
                   <Image src={hamburgerOrgange} alt="Menu" height={35} width={35}/>
                 </div>

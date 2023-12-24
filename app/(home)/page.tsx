@@ -43,6 +43,8 @@ import QuoteContainer from "@components/Quote";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import ScrollToTop from "@/source/components/ScrollToTop";
+import AppsContainer from "@/source/components/AppsContainer";
+import PrimaryButton from "@/source/components/PrimaryButton";
 
 export default async function Home() {
   const user = await getServerSession(authOptions);
@@ -114,9 +116,7 @@ export default async function Home() {
             <div className="flex justify-center flex-col items-center text-white">
               <p className="text-[#FFE8BB] md:text-[27px] font-[400] text-[15px] leading-[22px] tracking-[0.45px] text-center pb-[10px] md:pb-[17px]">Your trusted companion <br className="md:hidden" /> for inner peace</p>
               <h6 className="text-[15px] md:text-[26px] font-[400] leading-[30.5px] tracking-[0.45px] pb-[4px] md:pb-[11px]">From $499</h6>
-              <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]">
-                Preorder
-              </button>
+              <PrimaryButton text={"Preorder"} pathUrl={"preorder"}/>
               <Link href={""} className="text-[#FF1F00] text-[10px] md:text-[21px] font-[600] leading-[30.5px] tracking-[0.3px] underline">
                   Learn More {">"}
               </Link>
@@ -132,7 +132,7 @@ export default async function Home() {
 
         {/* Section 1 */}
 
-        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[178px] relative">
+        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[178px] relative" id="sadhana">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={sadhanaLogo} heading="Sadhana" subHeading="Realise the Sacred 5 Vedic Rituals" />
             <LogoCard />
@@ -164,7 +164,7 @@ export default async function Home() {
 
         {/* Section 2 */}
 
-        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]">
+        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="satsang">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={satsangLogo} heading="SATSANG" subHeading="Absorb the distilled essence of spiritual truths" />
             <LogoCard />
@@ -194,7 +194,7 @@ export default async function Home() {
 
         {/* Section 3 */}
 
-        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]">
+        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="svadhaya">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={savadhyaLogo} heading="SVADHAYA" subHeading="Ignite The Fire of Knowledge Within" />
             <LogoCard />
@@ -224,7 +224,7 @@ export default async function Home() {
 
         {/* Section 4 */}
 
-        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]">
+        <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="sangeet">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={sangeetLogo} heading="sangeet" subHeading="Plunge in the divine sentiment of Bhakti through
   Timeless Classics and bhajans."/>
@@ -271,13 +271,7 @@ export default async function Home() {
                     </filter>
                     </defs>
                 </svg>
-              <div className="bg-none bg-[#F11D00] rounded-[9.44px] border-2 border-[#CC7A00] md:border-none md:bg-transparent md:bg-btn md:w-[175px] w-[124px] md:h-[63px] h-[33px] flex justify-center items-center z-10 md:!shadow-none
-              " style={{
-                boxShadow: "0px 0px 9px 2px rgba(255, 255, 255, 0.49)"
-              }}>
-                <p className="text-base-white font-[Open Sans] md:text-[25px] font-[600] md:leading-[30.5px] md:tracking-[0.75px] capitalize">Preorder</p>
-              </div>
-
+                <PrimaryButton text={"Preorder"} pathUrl={"preorder"}/>
             </div>
           </div>
           <div className="md:mt-[74px] mt-[117px] md:pb-[158px] pb-[71px]">
@@ -316,9 +310,7 @@ export default async function Home() {
                 <h3 className="text-[#0292B5] font-[Open Sans] md:text-[56px] font-[600] md:leading-[59.5px] md:tracking-[1.68px] uppercase">
                   Offer A Gift Of Dharma To Your Loved Ones 
                 </h3>
-                <div className="bg-btn w-[175px] h-[63px] flex justify-center items-center">
-                    <p className="text-base-white md:text-[25px] font-[Open Sans] font-[600] md:leading-[30.5px] md:tracking-[0.75px]">Preorder</p>
-                </div>
+                <PrimaryButton text={"Preorder"} pathUrl={"preorder"}/>
             </div>
             <p className="text-[#0292B5] text-[36px] font-[600] leading-[39px] uppercase text-center mt-[37px] md:hidden">
             Offer A Gift <br />
@@ -328,9 +320,10 @@ export default async function Home() {
             <div className="md:w-[55vw] flex items-end justify-end">
                 <Image src={sadhanaBook} alt=""/>
             </div>
-            <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[52px] !mt-[26px]">
-              Preorder
-            </button>
+            <div className="mb-[52px] md:hidden">
+              <PrimaryButton text={"Preorder"} pathUrl={"preorder"}/>
+            </div>
+
         </div>
       </section>
   );
@@ -435,37 +428,6 @@ const FeaturesContainer: React.FC<FeaturesContainerInterface> = ({
           )
         }
       </div>
-    </div>
-  );
-}
-
-const AppsContainer: React.FC = () => {
-  return (
-    <div className="h-fit bg-[#042843] flex flex-col justify-center items-center  pt-[28px] pb-[25px] md:py-[55px]">
-      <div className="flex flex-col gap-[29px] md:gap-[10px] md:mb-[50px] mb-[31px]">
-        <h1 className="text-[#FFE8BB] text-center font-[Open Sens] text-[26px] md:text-[45px] font-[300] leading-[37px] tracking-[0.78px] md:tracking-[1.35px] capitalize px-[90px] md:px-0">Four Pre Installed Apps I Offerings</h1>
-        <h5 className="text-base-white text-[15px] md:text-[26px] font-[300] leading-[18.5px] tracking-[0.45px] text-center md:leading-[37px] md:tracking-[0.78px] px-[50px] md:px-0">Your gateway to secluded sadhana with apps for spiritual enrichment </h5>
-      </div>
-
-      <div className="grid grid-cols-2 gap-x-[105px] gap-y-[29.5px] md:flex flex-wrap md:gap-[95px]">
-        <div className="flex flex-col gap-[11px] md:gap-[17px] items-center">
-          <Image src={sadhanaLogo} alt="Sadhana" width={78} height={78} />
-          <p className="text-base-white text-[14.22px] md:text-[27px] font-[600] leading-[37px] md:tracking-[-0.81px]">Sadhana</p>
-        </div>
-        <div className="flex flex-col gap-[11px] md:gap-[17px] items-center">
-          <Image src={satsangLogo} alt="Sadhana" width={78} height={78} />
-          <p className="text-base-white text-[14.22px] md:text-[27px] font-[600] leading-[37px] md:tracking-[-0.81px]">Satsang</p>
-        </div>
-        <div className="flex flex-col gap-[11px] md:gap-[17px] items-center">
-          <Image src={savadhyaLogo} alt="Sadhana" width={78} height={78} />
-          <p className="text-base-white text-[14.22px] md:text-[27px] font-[600] leading-[37px] md:tracking-[-0.81px]">Svadhaya</p>
-        </div>
-        <div className="flex flex-col gap-[11px] md:gap-[17px] items-center">
-          <Image src={sangeetLogo} alt="Sadhana" width={78} height={78} />
-          <p className="text-base-white text-[14.22px] md:text-[27px] font-[600] leading-[37px] md:tracking-[-0.81px]">Sangeet</p>
-        </div>
-      </div>
-      <h4 className="text-base-white text-[15px] md:text-[25px] font-[300] font-[Open Sens] leading-[30.5px] tracking-[0.45px] md:tracking-[0.75px] mt-[26px]">Experience a proud journey within</h4>
     </div>
   );
 }

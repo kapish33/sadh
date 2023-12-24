@@ -3,7 +3,7 @@ import profileLogo from "../../../../assets/profile_logo.png";
 
 const Index: React.FC = () => {
     return (
-        <section className="bg-[#001d2d45] hidden md:flex flex-col items-center text-base-white pt-[230px]">
+        <section className="bg-[#001d2d45] hidden md:flex flex-col items-center text-base-white">
             <p className="pb-[86px] text-[36px] font-[700]">What Customers Says About Us</p>
             <p className="pb-[60px] text-[24px] font-[700]">Top reviews from India</p>
             <div className="flex flex-col items-center pb-[86px]">

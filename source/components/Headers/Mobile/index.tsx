@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import hamburgerWhite from "@/assets/hamburger-white.png"
 import hamburgerOrgange from "@/assets/Hamburger-orange.png"
 import gsap from "gsap";
+import PreOrderButton from "../../PrimaryButton";
 
 interface IndexProps {}
 
@@ -32,16 +33,18 @@ const Index: React.FC<IndexProps> = () => {
 
   return (
     <nav id="header" className={`md:hidden visible bg-primary-500 fixed w-full top-0 z-20 header`}>
-      <div className="flex justify-between px-[24px] py-[12px]">
+      <div className="flex justify-between items-center px-[24px] py-[12px]">
         <Image
           src={HomeImage.sadhanaLogo.img}
           alt={HomeImage.sadhanaLogo.alt}
           onClick={() => router.push("/")}
         />
-        <div className="flex items-center gap-[5px]">
-          <button className="md:hidden bg-btn h-[34px] w-[124px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center font-open-sans" onClick={() => router.push("/preorder")}>
-            Preorder
-          </button>
+        <div className="flex justify-center items-center gap-[5px]">
+        {/* <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]" onClick={() => router.push("/preorder")}>
+                Preorder
+              </button> */}
+          <PreOrderButton text={"Preorder"} pathUrl={"preorder"}/>
+
           <Image src={hamburgerWhite} alt="" onClick={() => {onOpen();}} width={35} height={35}/>
         </div>
       </div>
@@ -61,6 +64,8 @@ const Index: React.FC<IndexProps> = () => {
                             ? "!text-warning-700 font-bold"
                             : "text-base-white"
                         } text-[28px] font-open-sans font-semibold pb-[31px]`}
+                        onClick={onClose}
+                        // onScroll={() => {onClose();}}
                         style={{
                           textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
                         }}

@@ -11,7 +11,6 @@ declare global {
 
 const Home = () => {
   const checkoutHandler = async (productId: string) => {
-    console.log("productId", productId);
     const {
       data: { order },
     } = await axios.post(
@@ -20,30 +19,40 @@ const Home = () => {
         productId,
       }
     );
-
     const options = {
       key: "rzp_test_L9zPSRr4rnszx5",
+      name: "Product Name",
+      currency: order.currency,
       amount: order.amount,
-      currency: "INR",
-      name: "6 Pack Programmer",
-      description: "Tutorial of RazorPay",
-      image: "https://avatars.githubusercontent.com/u/25058652?v=4",
       order_id: order.id,
-      callback_url: "http://localhost:3000",
+      description: "We Can Put Anything!!",
+      // image: logoBase64,
+      handler: async function (response: {
+        razorpay_payment_id: string;
+        razorpay_order_id: string;
+        razorpay_signature: string;
+      }) {
+        await fetch("http://localhost:3000/api/payment/razerpay/verify", {
+          method: "POST",
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_signature: response.razorpay_signature,
+          }),
+        });
+      },
       prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#121212",
+        name: "mmantratech",
+        email: "mmantratech@gmail.com",
+        contact: "8707559567",
       },
     };
     const razor = new window.Razorpay(options);
     razor.open();
+
+    razor.on("payment.failed", function () {
+      alert("Payment failed. Please try again. Contact support for help");
+    });
   };
 
   return (

@@ -1,6 +1,8 @@
 import getPaginatedData from "@/firebase/RealTime-Database/paginated";
 import Link from "next/link";
 import React from "react";
+import { SignOut } from "../../Button/SignOut";
+import { Filter } from "../../Filter/Admin";
 
 const Table: React.FC<{ page: number; size: number }> = async ({
   page,
@@ -14,28 +16,10 @@ const Table: React.FC<{ page: number; size: number }> = async ({
 
   return (
     <div>
-      <div className="flex bg-error-25 gap-2 justify-between">
-        <div>
-          <input className="bg-red-400" type="text" name="" id="" />
-        </div>
-        <div className="flex">
-          {/* Previous Page Link */}
-
-          <Link href={hasPrevious ? `/dashboard/${page - 1}/${size}` : ""}>
-            <button
-              className={`btn primary me-2 ${!hasPrevious && "disabled"}`}
-            >
-              Previous
-            </button>
-          </Link>
-
-          {/* Next Page Link */}
-          <Link href={hasNext ? `/dashboard/${page + 1}/${size}` : ""}>
-            <button className={`btn primary ${!hasNext && "disabled"}`}>
-              Next
-            </button>
-          </Link>
-        </div>
+      <div className="text-right bg-gradient-to-r from-primary-600/40 from-10% via-primary-600/70 via-30% to-primary-600/50 to-90% p-2">
+        <Filter />
+        <SignOut />
+        {/* https://next-auth.js.org/configuration/pages#credentials-sign-in */}
       </div>
 
       {/* Display the fetched data */}
@@ -57,6 +41,20 @@ const Table: React.FC<{ page: number; size: number }> = async ({
           ))}
         </tbody>
       </table>
+      <div className="text-right py-2">
+        <Link href={hasPrevious ? `/dashboard/${page - 1}/${size}` : ""}>
+          <button className={`btn primary me-2 ${!hasPrevious && "disabled"}`}>
+            Previous
+          </button>
+        </Link>
+
+        {/* Next Page Link */}
+        <Link href={hasNext ? `/dashboard/${page + 1}/${size}` : ""}>
+          <button className={`btn primary ${!hasNext && "disabled"}`}>
+            Next
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^2.2.2",
     "axios": "^1.6.2",
     "bcryptjs": "^2.4.3",
     "firebase": "^10.7.1",
     "gsap": "^3.12.4",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "next-auth": "^4.24.5",
     "pupa": "^3.1.0",
     "razorpay": "^2.9.2",
@@ -21,6 +22,7 @@
     "react-dom": "^18",
     "request-ip": "^3.3.0",
     "sass": "^1.69.5",
+    "stripe": "^14.10.0",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

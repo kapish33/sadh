@@ -19,7 +19,7 @@ export interface Data {
 export default async function crudOperations(
   action: OPERATIONS,
   collectionName: string,
-  data?: Data
+  data?: any
 ) {
   const dataCollection = collection(db, collectionName);
 

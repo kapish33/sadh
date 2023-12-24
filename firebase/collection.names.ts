@@ -1,3 +1,4 @@
 export const tables = {
-  users: "users",
+  admin: "admin",
+  customer: "customer",
 } as const;

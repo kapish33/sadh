@@ -50,7 +50,8 @@ export async function POST(request: Request) {
   };
 
   const order = await raz_pay.orders.create(options);
-  console.log("findProductForAmount", order);
+  // console.log("findProductForAmount", order);
+
   return NextResponse.json(
     { order },
     {

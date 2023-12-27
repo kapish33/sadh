@@ -16,12 +16,18 @@ const Index: React.FC<IndexProps> = () => {
   const route = usePathname();
   const router = useRouter();
   const boxRef:any = useRef();
+  const linksRef:any = useRef();
+  const timeline = gsap.timeline({paused: false});
 
   const onOpen = () => {
-    gsap.to(boxRef.current, {
+    timeline.to(boxRef.current, {
       y: 0,
-      duration: .6
-    });
+      duration: .6,
+    }).to("#animation a", {
+      opacity: 1,
+      y: 0,
+      stagger: 0.2
+    })
    };
 
    const onClose = () => {
@@ -29,6 +35,11 @@ const Index: React.FC<IndexProps> = () => {
       y: "-100%",
       duration: .6
     });
+    gsap.to("#animation a", {
+      opacity: 0,
+      y: -100,
+      stagger: 0.2
+    })
    };
 
   return (
@@ -40,11 +51,7 @@ const Index: React.FC<IndexProps> = () => {
           onClick={() => router.push("/")}
         />
         <div className="flex justify-center items-center gap-[5px]">
-        {/* <button className="bg-btn h-[30px] w-[100px] md:w-[201px] md:h-[60px] bg-cover bg-no-repeat bg-center glow text-[12px] md:text-[24px] md:font-[700] text-white flex justify-center items-center mb-[6px]" onClick={() => router.push("/preorder")}>
-                Preorder
-              </button> */}
           <PreOrderButton text={"Preorder"} pathUrl={"preorder"}/>
-
           <Image src={hamburgerWhite} alt="" onClick={() => {onOpen();}} width={35} height={35}/>
         </div>
       </div>
@@ -56,16 +63,16 @@ const Index: React.FC<IndexProps> = () => {
                 onScroll={() => {onClose();}}>
                   <Image src={hamburgerOrgange} alt="Menu" height={35} width={35}/>
                 </div>
-                <div className="px-[38px]">
+                <div className="px-[38px]" id="animation">
                   {Navigation.map((nav) => (
                       <Link
                         className={`block py-3 md-regular ${
                           route === nav.path
                             ? "!text-warning-700 font-bold"
                             : "text-base-white"
-                        } text-[28px] font-open-sans font-semibold pb-[31px]`}
+                        } text-[28px] font-open-sans font-semibold pb-[31px] -translate-y-full opacity-0`}
                         onClick={onClose}
-                        // onScroll={() => {onClose();}}
+                        ref={linksRef}
                         style={{
                           textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
                         }}

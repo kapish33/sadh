@@ -35,6 +35,10 @@ type BackgroundImage = {
       url: "../assets/background_image.png"
     },
     {
+      name: "main-mobile",
+      url: "../assets/main-bg-mobile.png"
+    },
+    {
       name: "shiva-bg",
       url: "../assets/shiva_bg.png"
     },
@@ -49,6 +53,26 @@ type BackgroundImage = {
     {
       name: "white-bg",
       url: "../assets/white-bg-product.png"
+    },
+    {
+      name: "about-bg-one",
+      url: "../assets/about-bg1.png"
+    },
+    {
+      name: "about-bg-two",
+      url: "../assets/about_bg2.png"
+    },
+    {
+      name: "about-bg-two-mobile",
+      url: "../assets/about-bg-two-mobile.png"
+    },
+    {
+      name: "about-bg-damru",
+      url: "../assets/about-damru-bg.png"
+    },
+    {
+      name: "about-main-bg",
+      url: "../assets/about_main_bg.png"
     }
   ];
   

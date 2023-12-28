@@ -4,7 +4,7 @@ import Link from "next/link";
 const Index: React.FC = () => {
   return (
 
-    <footer className="hidden md:block text-base-white bg-[#001d2d45] pt-[220px] pb-[170px]">
+    <footer className="hidden md:block text-base-white pb-[170px]">
 
       {/* Footer center part */}
       <div className="flex flex-col justify-center items-center mb-[285px]">

@@ -15,7 +15,7 @@ export default function RootLayout({
     <>
     <html lang="en">
       <body className={`${montserrat.className} ${openSans.className} ${tiroGurmukhi.className} ${roboto.className} ${inter.className}`}>
-        <div id="main" className="bg-main">
+        <div id="main" className="bg-main-mobile md:bg-main">
           <Headers />
           {children}
           <Footer />

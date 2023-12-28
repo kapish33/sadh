@@ -5,4 +5,5 @@ export const AccentColors: Record<keyof Accent, string> = {
   pink: '#FF69B4',
   paper: '#F0F0F0',
   ink: '#333333',
+  yellowPrimary: '#FFD5A4'
 };

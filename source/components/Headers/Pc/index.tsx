@@ -18,9 +18,9 @@ const Index: React.FC<IndexProps> = () => {
           textShadow: "0px 4.482px 4.482px rgba(0, 0, 0, 0.25)"
         }} className="flex justify-center items-center text-[#024365] text-[13.447px] gap-[63px] font-[600]">
           <li>
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
-          <li><Link href="#">About</Link></li>
+          <li><Link href="/about">About</Link></li>
           <li><Link href="#">Products</Link></li>
           <li><Link href="#">Our Story</Link></li>
           <li><Link href="#">Contact</Link></li>

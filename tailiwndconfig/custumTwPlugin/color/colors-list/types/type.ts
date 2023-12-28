@@ -17,6 +17,7 @@ export type Accent = {
   pink: string;
   paper: string;
   ink: string;
+  yellowPrimary: string
 };
 
 export type Base = {

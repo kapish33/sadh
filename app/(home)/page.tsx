@@ -50,7 +50,7 @@ export default async function Home() {
   const user = await getServerSession(authOptions);
   if (user?.user) redirect(`/dashboard/1/10`);
   return (
-      <section className="font-open-sans">
+      <section className="font-open-sans pb-[150px] md:pb-[220px]">
         {/* Hero Part */}
         <div className="flex md:flex-row flex-col-reverse justify-center items-center w-full h-fit md:h-screen pt-[73px] md:pt-0 md:gap-[72px] mt-[53px] md:mt-0 mb-[150px] md:mb-0">
           <div className="flex flex-col gap-[18px] md:gap-[100px] items-center mt-[-30%] md:mt-0">

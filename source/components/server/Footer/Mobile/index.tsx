@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Index: React.FC = () => {
-    return <footer className=" md:hidden lg:hidden xl:hidden visible text-base-white bg-[#001d2d45] pt-[150px] pb-[41px]">
+    return <footer className=" md:hidden lg:hidden xl:hidden visible text-base-white pb-[41px]">
       {/* Footer center part */}
       <div className="flex flex-col justify-center items-center mb-[199px]">
         <Image src={"/sadhana_main_logo.png"} alt="Sadhana" width={135} height={129} />

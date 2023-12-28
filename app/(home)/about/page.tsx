@@ -89,7 +89,7 @@ const About = () => {
             </div>
 
             <div className='w-full md:md:w-[743px] px-[60px] md:px-0 flex flex-col gap-[18px] md:gap-[30px] md:items-end'>
-              <p className='text-center md:text-left text-[13px] leading-[21px] font-normal md:text-[25px] md:leading-[30px]'>The Vedic Sadhana Foundation, a non-profit organisation, is dedicated to reviving India's ancient Vedic heritage. With a strong commitment to accessibility and inclusivity, we make the timeless teachings of the Vedas accessible to all in today'sfast-paced world.</p>
+              <p className='text-center md:text-left text-[13px] leading-[21px] font-normal md:text-[25px] md:leading-[30px]'>The Vedic Sadhana Foundation, a non-profit organisation, is dedicated to reviving India&apos;s ancient Vedic heritage. With a strong commitment to accessibility and inclusivity, we make the timeless teachings of the Vedas accessible to all in today&apos;s fast-paced world.</p>
               <p className='text-center md:text-left text-[13px] font-normal md:text-[25px] leading-[30px]'>At our core, we serve humanity, nurturing holistic well-being, fostering spiritual growth, and preserving Vedic traditions for generations to come.</p>
             </div>
 
@@ -107,10 +107,10 @@ const About = () => {
           <div className='px-[60px] text-center pt-[34px] md:px-[110px] md:pt-[96px] z-10 relative'>
             <div className='flex flex-col md:flex-row md:gap-[61px] md:items-center'>
               <p className='text-[13px] font-normal leading-[21px] md:leading-[30px] !z-10 md:text-start md:flex-1 md:text-[25px]'>In my journey, inspired by the timeless Vedas, I have dedicated myself to making their sacred teachings accessible in their purest form. This led me to create the Sadhana Tablet, a sanctuary in our digitally distracted world, where seekers can connect with the divine for inner peace and spiritual growth.</p>
-              <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>The tablet's flagship, the Sadhana App, was crafted by me with a world-class team over two years, involving a significant investment to ensure its excellence. It offers a tranquil space for transformative experiences. Alongside the Sadhana App, I've handpicked the content of all four apps on the tablet, each a vital step on your journey to self-healing.</p>
+              <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>The tablet&apos;s flagship, the Sadhana App, was crafted by me with a world-class team over two years, involving a significant investment to ensure its excellence. It offers a tranquil space for transformative experiences. Alongside the Sadhana App, I&apos;ve handpicked the content of all four apps on the tablet, each a vital step on your journey to self-healing.</p>
             </div>
             <div className='flex flex-col md:flex-row md:gap-[61px] md:pt-[56px]'>
-              <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>Designed as a sacred digital altar, the Sadhana Tablet is more than a device; it's a journey into the heart of Vedic wisdom, a testament to the Vedas' timeless teachings.</p>
+              <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>Designed as a sacred digital altar, the Sadhana Tablet is more than a device; it&apos;s a journey into the heart of Vedic wisdom, a testament to the Vedas&apos; timeless teachings.</p>
               <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[43px] md:pt-0 !z-10 md:text-start md:flex-1'>In the stillness of devotion, the heart finds its true home, and this tablet is designed to guide you to that sacred stillness.</p>
             </div>
 
@@ -128,8 +128,8 @@ const About = () => {
         <div className='flex flex-col md:flex-row gap-[48px] md:gap-[50px] md:items-start'>
           <Image src={om_swami} alt='' className='md:h-[470px] md:w-[412px]' />
           <div className='flex flex-col gap-[48px] md:gap-[31px] text-white'>
-            <p className='text-[15px] md:text-[25px] md:leading-[30px] font-normal leading-[21px] text-center md:text-start'>Om Swami, an unconventional revered monk and celebrated author, brings over 15,000 hours of meditation and Mantra Sadhana expertise. With 16 best-selling books on meditation, wellness, and spirituality, his unique perspective blends ancient wisdom with contemporary insights, touching the lives of millions worldwide. Swami's transformation from a millionaire entrepreneur to a monk embodies the fusion of spirituality and modernity.</p>
-            <p className='text-[15px] md:text-[25px] md:leading-[30px] font-normal leading-[21px] text-center md:text-start'>His entrepreneurial vision has been pivotal in integrating traditional spiritual practices with cutting-edge technology. Om Swami's commitment to making Vedic teachings and practices accessible powers the mission of the Vedic Sadhana Foundation.</p>
+            <p className='text-[15px] md:text-[25px] md:leading-[30px] font-normal leading-[21px] text-center md:text-start'>Om Swami, an unconventional revered monk and celebrated author, brings over 15,000 hours of meditation and Mantra Sadhana expertise. With 16 best-selling books on meditation, wellness, and spirituality, his unique perspective blends ancient wisdom with contemporary insights, touching the lives of millions worldwide. Swami&apos;s transformation from a millionaire entrepreneur to a monk embodies the fusion of spirituality and modernity.</p>
+            <p className='text-[15px] md:text-[25px] md:leading-[30px] font-normal leading-[21px] text-center md:text-start'>His entrepreneurial vision has been pivotal in integrating traditional spiritual practices with cutting-edge technology. Om Swami&apos;s commitment to making Vedic teachings and practices accessible powers the mission of the Vedic Sadhana Foundation.</p>
           </div>
         </div>
       </div>

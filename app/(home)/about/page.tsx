@@ -105,11 +105,11 @@ const About = () => {
             <h5 className='text-accent-yellowPrimary text-[33px] md:text-[40px] text-center font-semibold capitalize'>The birth of the sadhana tablet</h5>
           </div>
           <div className='px-[60px] text-center pt-[34px] md:px-[110px] md:pt-[96px] z-10 relative'>
-            <div className='flex flex-col md:flex-row md:gap-[61px] md:items-center'>
+            <div className='flex flex-col md:flex-row md:gap-[61px] md:items-start'>
               <p className='text-[13px] font-normal leading-[21px] md:leading-[30px] !z-10 md:text-start md:flex-1 md:text-[25px]'>In my journey, inspired by the timeless Vedas, I have dedicated myself to making their sacred teachings accessible in their purest form. This led me to create the Sadhana Tablet, a sanctuary in our digitally distracted world, where seekers can connect with the divine for inner peace and spiritual growth.</p>
               <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>The tablet&apos;s flagship, the Sadhana App, was crafted by me with a world-class team over two years, involving a significant investment to ensure its excellence. It offers a tranquil space for transformative experiences. Alongside the Sadhana App, I&apos;ve handpicked the content of all four apps on the tablet, each a vital step on your journey to self-healing.</p>
             </div>
-            <div className='flex flex-col md:flex-row md:gap-[61px] md:pt-[56px]'>
+            <div className='flex flex-col md:flex-row md:gap-[61px] md:pt-[56px] md:items-start'>
               <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[39px] md:pt-0 !z-10 md:text-start md:flex-1'>Designed as a sacred digital altar, the Sadhana Tablet is more than a device; it&apos;s a journey into the heart of Vedic wisdom, a testament to the Vedas&apos; timeless teachings.</p>
               <p className='md:text-[25px] text-[13px] font-normal md:leading-[30px] leading-[21px] pt-[43px] md:pt-0 !z-10 md:text-start md:flex-1'>In the stillness of devotion, the heart finds its true home, and this tablet is designed to guide you to that sacred stillness.</p>
             </div>

@@ -20,11 +20,7 @@ export const routes: Record<string, Route> = {
   },
   contact: {
     path: "/contact",
-    name: "Contact",
-  },
-  ourStory: {
-    path: "/our-story",
-    name: "Our Story",
+    name: "Contact Us",
   },
   terms: {
     path: "/contact",

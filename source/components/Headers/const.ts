@@ -4,7 +4,6 @@ export const Navigation = [
   routes.home,
   routes.about,
   routes.product,
-  routes.ourStory,
   routes.contact,
 ];
 

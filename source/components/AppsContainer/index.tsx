@@ -11,7 +11,7 @@ const AppsContainer: React.FC = () => {
     return (
       <div className="h-fit bg-[#042843] flex flex-col justify-center items-center  pt-[28px] pb-[25px] md:py-[55px]">
         <div className="flex flex-col gap-[29px] md:gap-[10px] md:mb-[50px] mb-[31px]">
-          <h1 className="text-[#FFE8BB] text-center font-[Open Sens] text-[26px] md:text-[45px] font-[300] leading-[37px] tracking-[0.78px] md:tracking-[1.35px] capitalize px-[90px] md:px-0">Four Pre Installed Apps I Offerings</h1>
+          <h1 className="text-[#FFE8BB] text-center font-[Open Sens] text-[26px] md:text-[45px] font-[300] leading-[37px] tracking-[0.78px] md:tracking-[1.35px] capitalize px-[90px] md:px-0">Four Pre Installed Apps | Offerings</h1>
           <h5 className="text-base-white text-[15px] md:text-[26px] font-[300] leading-[18.5px] tracking-[0.45px] text-center md:leading-[37px] md:tracking-[0.78px] px-[50px] md:px-0">Your gateway to secluded sadhana with apps for spiritual enrichment </h5>
         </div>
   
@@ -33,7 +33,7 @@ const AppsContainer: React.FC = () => {
             <p className="text-base-white text-[14.22px] md:text-[27px] font-[600] leading-[37px] md:tracking-[-0.81px]">Sangeet</p>
           </div>
         </div>
-        <h4 className="text-base-white text-[15px] md:text-[25px] font-[300] font-[Open Sens] leading-[30.5px] tracking-[0.45px] md:tracking-[0.75px] mt-[26px]">Experience a proud journey within</h4>
+        <h4 className="text-base-white text-[15px] md:text-[25px] font-[300] font-[Open Sens] leading-[30.5px] tracking-[0.45px] md:tracking-[0.75px] mt-[26px]">Experience A Proud Journey Within</h4>
       </div>
     );
   }

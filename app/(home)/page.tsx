@@ -37,6 +37,7 @@ import featureLogo12 from "../../assets/homepage_features_logo/feature_logo12.pn
 import featureLogo13 from "../../assets/homepage_features_logo/feature_logo13.png"
 import featureLogo14 from "../../assets/homepage_features_logo/feature_logo14.png"
 import featureLogo15 from "../../assets/homepage_features_logo/feature_logo15.png"
+import featureLogo16 from "../../assets/homepage_features_logo/feature_logo16.png"
 import sadhanaBook from "../../assets/sadhanaBook.png";
 import AnimatedTab from "../../assets/tab_gif.gif";
 import QuoteContainer from "@components/Quote";
@@ -55,10 +56,10 @@ export default async function Home() {
         <div className="flex md:flex-row flex-col-reverse justify-center items-center w-full h-fit md:h-screen pt-[73px] md:pt-0 md:gap-[72px] mt-[53px] md:mt-0 mb-[150px] md:mb-0">
           <div className="flex flex-col gap-[18px] md:gap-[100px] items-center mt-[-30%] md:mt-0">
             <h1 className="font-open-sans text-base-white text-[37px] md:text-[59px] font-[300] md:leading-[55px] tracking-[0.37px] md:tracking-[0.59px] md:text-left text-center">
-              Your Sacred<br />Digital Altar, Awaits
+            Your Gateway to<br/>Sacred Digital Worship
             </h1>
             <p className="md:text-right text-center text-[#FFE8BA] text-[15px] md:text-[25px] capitalize md:font-[300] leading-[30px] tracking-[0.15px] md:tracking-[0.25px] font-open-sans">
-              Transform with Every Tap, Distraction-Free<br />Spirituality at Your Fingertips
+            Experience the World's First Custom built<br/>Tablet with Distraction-Free Spirituality
             </p>
           </div>
           <div>
@@ -86,8 +87,7 @@ export default async function Home() {
                 md:leading-[38px]
                 md:tracking-[0.72px]"
             >
-              <p>Vedic wisdom meets modern ease <br />
-                  Elevate your spiritual with sacred sadhanas, e-books, <br className="md:hidden" /> music, podcasts <br className="hidden md:block" /> and meditations
+              <p>Elevate your spiritual journey with the Sadhana Tablet, where<br/>Vedic wisdom meets modern ease. Access sacred Vedic rituals,<br/>Sadhanas, texts, music, podcasts, and meditations.
               </p>
             </div>
 
@@ -135,7 +135,6 @@ export default async function Home() {
         <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[178px] relative" id="sadhana">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={sadhanaLogo} heading="Sadhana" subHeading="Realise the Sacred 5 Vedic Rituals" />
-            <LogoCard />
           </div>
           <ImageContainer tabImage={tab1} hindiLogoImage={hindiLogo1} text="Know Your Self" />
           <div className="bg-durga-bg bg-no-repeat absolute inset-0 bg-cover h-[40%] md:h-[70%] bg-left mix-blend-color-dodge"></div>
@@ -146,20 +145,14 @@ export default async function Home() {
           fLogo2={featureLogo2}
           fLogo3={featureLogo3}
           fLogo4={featureLogo4}
-          fHeading1="Perform Vedic Rituals"
-          fHeading2="Discover Siddhāshrama"
+          fHeading1="Interactive Vedic Rituals"
+          fHeading2="Awaken with Powerful Mantras"
           fHeading3="Access Ancient Wisdom"
-          fHeading4="Unlock Premium Features"
-          fSubHeading1="Japa, Abhishekam Yagna, Sadhana 
-          Nitya-pooja in a digital space, With greaterfocus"
-          fSubHeading2="150 awakened mantras, 
-          11 powerful deities and grand 
-          Temples to choose from"
-          fSubHeading3="Potent wisdom from the Vedas to
-          Expand your consciousness"
-          fSubHeading4="Early access to special upcoming apps and
-          Content like Sri ChakraNagar/ premium 
-          Access/preview for tablet users only"
+          fHeading4="Stay Connected, Evolve Continuously"
+          fSubHeading1="Tap into the power of Manasik Puja (Mental Worship) by performing sacred Vedic rituals with ease."
+          fSubHeading2="Connect with your favourite Deity through 150 awakened Mantras - 11 Powerful Real-life like Temples to choose from."
+          fSubHeading3="Direct from authentic source of timeless Vedas, expand your consciousness while maintaining a streak."
+          fSubHeading4="Stay inspired with timely reminders and join thousands in special Sadhanas of Navadurga and Sri Suktam."
         />
 
         {/* Section 2 */}
@@ -167,7 +160,6 @@ export default async function Home() {
         <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="satsang">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={satsangLogo} heading="SATSANG" subHeading="Absorb the distilled essence of spiritual truths" />
-            <LogoCard />
           </div>
           <ImageContainer tabImage={tab2} hindiLogoImage={hindiLogo2} text="Through the company of the wise
   arises non-attachment."/>
@@ -178,18 +170,14 @@ export default async function Home() {
           fLogo2={featureLogo6}
           fLogo3={featureLogo7}
           fLogo4={featureLogo8}
-          fHeading1="Auto-Play"
-          fHeading2="Personalisation"
-          fHeading3="Advanced Search"
-          fHeading4="Bookmark"
-          fSubHeading1="Play podcasts from an 
-          Album with multiple tracks"
-          fSubHeading2="Create custom collections
-          with tracks across albums"
-          fSubHeading3="Search across content
-          for quick access"
-          fSubHeading4="Bookmark for easy relistening
-          and future reference"
+          fHeading1="Exclusive Wisdom Series"
+          fHeading2="In-Depth Discourses"
+          fHeading3="Wisdom from the Master"
+          fHeading4="Life-Changing Wisdom"
+          fSubHeading1="Dive into Om Swami's exclusive collection of best-selling audiobooks and podcast series, created in partnership with Audible India."
+          fSubHeading2="Gain access to profound discourses by Om Swami on Bhagavad Gita, Gorak Dhanda, Daily Wisdom, Bhajagovindam, and more."
+          fSubHeading3="Immerse yourself in the wisdom of Devi Bhagavatam, Gayathri Sadhana, Stress-free living, Zen, and powerful Kundalini Sadhana, all taught in detail by Om Swami with thousands of hours of firsthand experience."
+          fSubHeading4="Explore over 150 hours of life-changing wisdom preloaded in the tablet, valued at over $500"
         />
 
         {/* Section 3 */}
@@ -197,7 +185,6 @@ export default async function Home() {
         <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="svadhaya">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
             <TitleContainer image={savadhyaLogo} heading="SVADHAYA" subHeading="Ignite The Fire of Knowledge Within" />
-            <LogoCard />
           </div>
           <ImageContainer tabImage={tab3} hindiLogoImage={hindiLogo3} text="Be your own light" />
         </div>
@@ -207,28 +194,25 @@ export default async function Home() {
           fLogo2={featureLogo10}
           fLogo3={featureLogo11}
           fLogo4={featureLogo12}
-          fHeading1="Personalisation"
-          fHeading2="Offline"
-          fHeading3="Advanced Search"
-          fHeading4="Highlights"
-          fSubHeading1="Advanced e-book reader with 
+          fHeading1="Dive into Vedic Wisdom"
+          fHeading2="Exclusive Spiritual Library"
+          fHeading3="DRM-Enabled Vedic Library"
+          fHeading4="Om Swami's Selection"
+          fSubHeading1="Advanced E-book reader with 
           customisation options for a 
           personalised reading experience"
-          fSubHeading2="Access books in offline mode for
-          Reading when the internet is unavailable"
-          fSubHeading3="Search text across books to find 
-          what you are looking for"
-          fSubHeading4="Highlight liked content for future 
-          Reference with easy access"
+          fSubHeading2="Access Books In Offline Mode For
+          Reading When The Internet Is Unavailable"
+          fSubHeading3="Search Text Across Books To Find 
+          What You Are Looking For"
+          fSubHeading4="Hand-picked Legendary Titles To Enrich Your Vedic Knowledge"
         />
 
         {/* Section 4 */}
 
         <div className="w-full flex flex-col justify-center items-center text-center md:pt-[200px] pt-[163px]" id="sangeet">
           <div className="flex flex-col md:gap-[44px] gap-[45px]">
-            <TitleContainer image={sangeetLogo} heading="sangeet" subHeading="Plunge in the divine sentiment of Bhakti through
-  Timeless Classics and bhajans."/>
-            <LogoCard />
+            <TitleContainer image={sangeetLogo} heading="sangeet" subHeading="Ignite the devotional sentiment of Bhakti"/>
           </div>
           <ImageContainer tabImage={tab4} hindiLogoImage={hindiLogo4} text="Om, may we hear with our ears
   only 
@@ -238,23 +222,18 @@ export default async function Home() {
         <div className="relative">
 
         <FeaturesContainer
-          fLogo1={featureLogo5}
-          fLogo2={featureLogo7}
-          fLogo3={featureLogo10}
-          fLogo4={featureLogo6}
-          fHeading1="Auto-Play"
-          fHeading2="Advanced Search"
-          fHeading3="Offline"
-          fHeading4="Personalisation"
-          fSubHeading1="Advanced e-book reader with 
-          customisation options for a 
-          personalised reading experience"
-          fSubHeading2="Access books in offline mode for
-          Reading when the internet is unavailable"
-          fSubHeading3="Search text across books to find 
-          what you are looking for"
-          fSubHeading4="Highlight liked content for future 
-          Reference with easy access"
+          fLogo1={featureLogo13}
+          fLogo2={featureLogo14}
+          fLogo3={featureLogo15}
+          fLogo4={featureLogo16}
+          fHeading1="Curated Melodies"
+          fHeading2="Vedic Chants & Bhajans"
+          fHeading3="Diverse Music Collection"
+          fHeading4="Devotional Meditations"
+          fSubHeading1="Enjoy a specially curated music collection featuring various artists."
+          fSubHeading2="Immerse yourself in Vedic chants, healing mantras, and devotional bhajans sourced and licensed from Shemaroo Bhakti."
+          fSubHeading3="Access music worth over $500 with a selection of over 100 preloaded tracks from renowned artists like Javed Ali, Sadhana Sargam, Anup Jalota, Shankar Mahadevan, and Suresh Wadkar."
+          fSubHeading4="Experience devotional meditations led by Om Swami himself."
         />
 
           <div className="flex flex-col justify-center items-center md:mt-[88px] mt-[117px]">
@@ -305,14 +284,14 @@ export default async function Home() {
           />
         </div> */}
 
-        <div className="flex flex-col md:flex-row w-full bg-[#ffffff99] justify-center items-center">
+        <div className="flex flex-col md:flex-row w-full bg-[#A2D0E9] justify-center items-center">
             <div className="w-[45vw] md:flex flex-col justify-center items-start md:pl-[195px] md:gap-[50px] hidden">
-                <h3 className="text-[#0292B5] font-[Open Sans] md:text-[56px] font-[600] md:leading-[59.5px] md:tracking-[1.68px] uppercase">
+                <h3 className="text-[#0275B5] font-[Open Sans] md:text-[56px] font-[600] md:leading-[59.5px] md:tracking-[1.68px] uppercase">
                   Offer A Gift Of Dharma To Your Loved Ones 
                 </h3>
                 <PrimaryButton text={"Preorder"} pathUrl={"preorder"}/>
             </div>
-            <p className="text-[#0292B5] text-[36px] font-[600] leading-[39px] uppercase text-center mt-[37px] md:hidden">
+            <p className="text-[#0275B5] text-[36px] font-[600] leading-[39px] uppercase text-center mt-[37px] md:hidden">
             Offer A Gift <br />
             Of Dharma To <br />
             Your Loved Ones 
@@ -478,7 +457,8 @@ const ImageContainer: React.FC<ImageContainerInterface> = ({ tabImage, hindiLogo
   return (
     <div className="flex flex-col justify-center items-center md:pb-[63px] pb-[66px]">
       <Image src={tabImage} alt="Tab" className="md:mt-[-5%]" />
-      <Image src={hindiLogoImage} alt="" className="md:mt-[-10%] px-[82px] md:px-0" />
+      <LogoCard />
+      <Image src={hindiLogoImage} alt="" className="px-[82px] md:px-0" />
       <h5 className="md:text-[26px] text-[15px] text-base-white font-[600] leading-[23px] md:leading-[37px] md:tracking-[0.78px] tracking-[0.45px] px-[82px] ">{text}</h5>
     </div>
   );

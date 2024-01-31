@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { HomeImage } from "@/assets/home";
 import { usePathname, useRouter } from "next/navigation";
-import hamburgerWhite from "@/assets/hamburger-white.png"
-import hamburgerOrgange from "@/assets/Hamburger-orange.png"
+import hamburgerOpen from "@/assets/hamburgerOpen.png"
+import hamburgerClose from "@/assets/hamburgerClose.png"
 import gsap from "gsap";
 import PreOrderButton from "../../PrimaryButton";
 
@@ -52,7 +52,7 @@ const Index: React.FC<IndexProps> = () => {
         />
         <div className="flex justify-center items-center gap-[5px]">
           <PreOrderButton text={"Preorder"} pathUrl={"preorder"}/>
-          <Image src={hamburgerWhite} alt="" onClick={() => {onOpen();}} width={35} height={35}/>
+          <Image src={hamburgerOpen} alt="" onClick={() => {onOpen();}} width={16} height={12}/>
         </div>
       </div>
       <div ref={boxRef} className="-translate-y-full absolute top-0 w-full z-50">
@@ -61,7 +61,7 @@ const Index: React.FC<IndexProps> = () => {
               <div className="relative w-full h-full">
                 <div className="flex justify-end px-[24px] py-[17px] " onClick={() => {onClose();}}
                 onScroll={() => {onClose();}}>
-                  <Image src={hamburgerOrgange} alt="Menu" height={35} width={35}/>
+                  <Image src={hamburgerClose} alt="Menu" height={41} width={41}/>
                 </div>
                 <div className="px-[38px]" id="animation">
                   {Navigation.map((nav) => (

@@ -73,6 +73,10 @@ type BackgroundImage = {
     {
       name: "about-main-bg",
       url: "../assets/about_main_bg.png"
+    },
+    {
+      name: "product-main-bg",
+      url: "../assets/backgroud_website.png"
     }
   ];
   

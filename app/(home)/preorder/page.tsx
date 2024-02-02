@@ -1,166 +1,252 @@
-import Faq from '@/source/components/Faq'
-import Product from '@/source/components/Products'
-import QuoteContainer from '@/source/components/Quote'
-import { randomInt } from 'crypto'
-import Image from 'next/image'
+'use client'
 import React from 'react'
-import checkIcon from "@/assets/check-icon.png"
-import unCheckIcon from "@/assets/uncheck-icon.png"
-import tab1 from "@/assets/cart_tab1.png"
-import product1 from "@/assets/cart_tab2.png"
-import product2 from "@/assets/cart_tab1.png"
-import product3 from "@/assets/cart_box.png"
-import product4 from "@/assets/cart_charger.png"
-import Review from '@/source/components/Review'
-import PrimaryButton from '@/source/components/PrimaryButton'
-import freeDeliveryIcon from "@/assets/freeDeliveryIcon.png";
-import panIndiaIcon from "@/assets/panIndiaIcon.png";
-import walletIcon from "@/assets/walletIcon.png";
-import prdtsImage from "@/assets/productsImage.png";
+import Image from "next/image";
 
-const PreOrder = () => {
-
-    const productsImage = [product1, product2, product3, product4];
-
+const page = () => {
     return (
-        <div className='min-h-screen relative md:pt-[5vw] font-inter'>
-            {/* Shiv Image */}
-            <div className='h-[452px] md:h-[1344.195px] bg-cover w-full md:bg-[80%_-17vw] mix-blend-color-dodge bg-[85%] bg-shiva-bg absolute top-0 pointer-events-none'></div>
-
-            <div className='pt-[87vw] md:pt-[32vw] '>
-                {/* Place order Indicator */}
-                <div className='px-[24px] md:px-[106px] flex flex-col md:gap-[21px] bg-[#001d2d45] md:pt-[38px] gap-[6px] pt-[17px]'>
-                    <div className='flex justify-between text-base-white font-roboto'>
-                        <p className='text-[12px] font-normal leading-[11.81px] md:text-[22px] md:font-medium md:leading-[20px]'>Add To Bag</p>
-                        <p className='text-[12px] font-normal leading-[11.81px] md:text-[22px] md:font-medium md:leading-[20px]'>Review Bag</p>
-                        <p className='text-[12px] font-normal leading-[11.81px] md:text-[22px] md:font-medium md:leading-[20px]'>Check Out</p>
+        <div className='bg-product-main-bg pt-[47.12px] mb-[90px]'>
+            <div className='w-full h-[80vh] lg:h-screen md:h-[60vh] flex flex-col items-center justify-center sm:flex-row'>
+                    <Image
+                        src="/tab.png"
+                        alt="picture"
+                        width={1001}
+                        height={887}
+                        className='lg:pt-[192px] lg:pt-[192px] md:pt-[120px] lg:ml-[-7rem] md:ml-[-7rem] md:w-[470px] lg:w-[1001px]'
+                    />
+                <div className="w-full sm:w-1/2 text-center sm:text-left text-white font-sans mt-4 sm:mt-0 p-4 sm:p-8">
+                    <div className="w-full max-w-[533px] lg:h-[214px]  text-white lg:text-[60px] sm:text-[60px] md:text-[35px] font-light font-['Open Sans'] leading-tight sm:leading-[67px] lg:leading-[67px] md:leading-[36px] ">
+                        Discover the Power of the Sadhana Tablet Summary
                     </div>
-                    <div className='flex justify-between items-center md:px-[20px] px-[7px]'>
-                        <Image src={checkIcon} alt='' width={0} height={0} className='w-[41px] h-[41px] md:w-[54px] md:h-[54px]' />
-                        <svg xmlns="http://www.w3.org/2000/svg" width="471" height="6" viewBox="0 0 471 6" fill="none" className='hidden md:block'>
-                            <path d="M3 3L468 3.00009" stroke="white" stroke-width="5" stroke-linecap="round" />
-                        </svg>
-                        {/* Mobile */}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="127" height="4" viewBox="0 0 127 4" fill="none" className='md:hidden'>
-                            <path d="M2.3042 1.53516H125.371" stroke="white" stroke-width="2.95361" stroke-linecap="round" />
-                        </svg>
-
-                        <Image src={unCheckIcon} alt='' width={0} height={0} className='w-[41px] h-[41px] md:w-[54px] md:h-[54px]' />
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="471" height="6" viewBox="0 0 471 6" fill="none" className='hidden md:block'>
-                            <path d="M3 3L468 3.00009" stroke="white" stroke-width="5" stroke-linecap="round" />
-                        </svg>
-                        {/* Mobile */}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="127" height="4" viewBox="0 0 127 4" fill="none" className='md:hidden'>
-                            <path d="M2.3042 1.53516H125.371" stroke="white" stroke-width="2.95361" stroke-linecap="round" />
-                        </svg>
-                        <Image src={unCheckIcon} alt='' width={0} height={0} className='w-[41px] h-[41px] md:w-[54px] md:h-[54px]' />
-                    </div>
-                </div>
-                {/* Product Add to Bag */}
-                <div className='flex bg-[#001d2d45] flex-col md:flex-row justify-center md:gap-[52px] pt-[29px] md:pt-[196px]'>
-                    <div className='flex flex-col justify-center items-center gap-[17.3px] md:gap-[48px]'>
-                        <div className='bg-white-bg bg-cover w-[311px] h-[311px] md:w-[515px] md:h-[515px] flex justify-center items-center'>
-                            <Image src={tab1} alt='Tab' width={389} height={349} className='w-[234.911px] h-[210.755px] md:w-[389px] md:h-[349px]' />
-                        </div>
-                        <div className='text-white text-xs font-inter md:hidden'>
-                            <p>Show in 360 view.</p>
-                        </div>
-                        <div className='flex gap-[8.13px] md:gap-[12px]'>
-                            {
-                                productsImage.map((prd) => (
-                                    <div key={prd.toString()} className='w-[57.566px] h-[57.566px] md:w-[85px] md:h-[85px] bg-white flex justify-center items-center rounded-md relative p-1'>
-                                        <Image src={prd} alt=''
-                                        />
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                    <div className='text-white font-open-sans px-[61px] md:px-0 pt-[57px] md:pt-0'>
-                        <h1 className='pb-[31px] md:pb-[36px] text-[25px] md:text-[36px] font-bold font-inter md:font-open-sans'>Shiva tablet 10-inch xxxxxx</h1>
-                        <div className='flex flex-col gap-[20px] md:gap-[46px] pb-[40px] md:pb-[30px]'>
-                            <p className='text-[15px] md:text-[24px] font-normal font-inter md:font-open-sans'>Shiva tablet 10-inch xxxxxx</p>
-                            <p className='text-[15px] md:text-[24px] font-normal font-inter md:font-open-sans'>Shiva tablet 10-inch xxxxxx</p>
-                            <p className='text-[15px] md:text-[24px] font-normal font-inter md:font-open-sans'>Shiva tablet 10-inch xxxxxx</p>
-                            <p className='text-[15px] md:text-[24px] font-normal font-inter md:font-open-sans'>Shiva tablet 10-inch xxxxxx</p>
-                        </div>
-                        <div className='flex flex-col gap-[12px] md:gap-[9px] mb-[24px] md:mb-[27px] font-open-sans'>
-                            <h5 className='text-[28px] md:text-[32px] font-bold'>INR 3,900 + GST</h5>
-                            <h5 className='text-[16px] md:text-[24px] font-normal'>M.R.P : <span className='line-through'>INR 4,300 + GST</span></h5>
-                        </div>
-                        <div className='mb-[18px]'>
-                            <PrimaryButton text={"Add to Bag"} pathUrl={""} />
-                        </div>
-                        <h5 className='text-[10px] md:text-[24px] font-inter font-normal text-center md:text-left'>Only 3 stocks left.</h5>
-                        <div className='w-full md:w-[424px] flex bg-[#C4E6FF] px-[17px] md:px-[24px] py-[10px] md:py-[17px] font-inter rounded-lg mt-[15px] md:mt-[37px]' style={{
-                            boxShadow: "0px 0px 16.4px 0px rgba(255, 255, 255, 0.69)"
-                        }}>
-                            <input type="text" placeholder='Enter Coupon Code' className='flex-grow outline-none border-none bg-inherit z-10 text-black text-[11.9px] md:text-[20px] font-normal' />
-                            <button className='outline-none border-none text-black text-[11.9px] md:text-[20px] font-bold'>APPLY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='w-full px-[20px] md:px-[156px] bg-[#001d2d45]'>
-                    {/* Fast Delivery */}
-                    <div className='w-full flex md:justify-end justify-center items-center pt-[50px] md:pt-[68px]'>
-                        <div className='border-y-[1px] w-full md:mx-0 md:w-[51%] flex justify-between md:justify-center items-start md:gap-[35px] md:pt-[9px] md:pb-[11px] pt-[9px] pb-[6px]'>
-                            <div className='flex flex-col items-center gap-[10px] w-[110px] md:w-auto'>
-                                <Image src={freeDeliveryIcon} alt='Free Delivery' width={50} height={50} className='h-[49px] w-[49px] md:h-[66px] md:w-[66px]' />
-                                <p className='text-[10px] md:text-[16px] text-white font-normal font-open-sans'>Fast Delivery</p>
-                            </div>
-                            <div className='flex flex-col items-center gap-[10px] w-[124px] md:w-auto'>
-                                <Image src={walletIcon} alt='Free Delivery' width={50} height={50} className='h-[49px] w-[49px] md:h-[66px] md:w-[66px]' />
-                                <p className='text-center text-[10px] md:text-[16px] text-white font-normal font-open-sans'>Your Tablet will be <br className='md:hidden' /> delivered<br className='hidden md:block' /> within 2 weeks.</p>
-                            </div>
-                            <div className='flex flex-col items-center gap-[10px] w-[110px] md:w-auto'>
-                                <Image src={panIndiaIcon} alt='Free Delivery' width={50} height={50} className='h-[49px] w-[49px] md:h-[66px] md:w-[66px]' />
-                                <p className='text-[10px] md:text-[16px] text-white font-normal font-open-sans'>PAN India Warranty</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Delivery Details */}
-                    <div className='flex flex-col md:flex-row justify-between items-center md:items-start px-[10px] pt-[45px]'>
-                        <div className='flex flex-col md:flex-row md:justify-between md:w-full gap-[45px] md:gap-[47px]'>
-                        <div className='flex flex-1 md:flex-initial text-center justify-center items-center'>
-                            <div className='flex items-center gap-3 text-[10px] md:text-[24px] text-white font-normal font-open-sans'><div className=' md:h-3 md:w-3 h-[3px] w-[3px] bg-white rounded-full'></div> Slip Case & Choose your Plan</div>
-                        </div>
-                        <div className='flex flex-col gap-[2px] md:gap-[8px] items-start justify-between flex-1 md:flex-initial ml-[20px]'>
-                            <div className='flex flex-row  items-start gap-[15px] md:gap-[13px]'>
-                                <div className='bg-white md:mt-2 h-[30px] w-[30px] md:h-[39px] md:w-[38px] rounded-[3px]'></div>
-                                <div className='flex flex-col items-start'>
-                                    <p className='text-[10px] md:text-[24px] text-white font-normal font-inter text-center'>Personalize as a gift</p>
-                                    <p className='text-[#BEBEBE] text-[8px] md:text-[20px] font-normal font-open-sans text-center'>(If yes, will impact delivery country & address)</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                {/* Products */}
-                <div className='bg-[#001d2d45] flex flex-col items-center justify-center pt-[90px] md:pt-[171px] pb-[128px] md:pb-[232px]'>
-                    <p className='text-[18px] md:text-[36px] text-white font-inter font-bold mb-[52px] md:mb-[54px]'>What&apos;s Inside The Box</p>
-                    <Image src={prdtsImage} alt='Products' />
-                    <div className='flex flex-col justify-center items-center gap-[32px] md:gap-[8px]'>
-                        <p className='uppercase text-white text-[14px] md:text-[36px] font-inter font-bold '>tab</p>
-                        <p className='text-white text-[12px] md:text-[20.4px] font-normal font-open-sans text-center px-[70px] xl:px-[390px] lg:px-[290px] md:px-[90px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div>
-                    <Review />
-                    <Faq />
-                    <div className='bg-[#001d2d45] pt-[94px] md:pt-[97px]'>
-                        <QuoteContainer authorName='Om Swami' quote='As the beautiful process of awakening unfolds, the oneness you experience with the universe becomes a permanent feature of your consciousness' key={randomInt(100)} />
+                    <br />
+                    <div className="w-full max-w-[562px] text-orange-200 text-[11.852px] sm:text-[25px] lg:text-[25px] md:text-[14px] font-normal font-['Open Sans'] lg:leading-[30px]">
+                        Beyond being a device, it's your premium custom gateway to a profound spiritual journey.
                     </div>
                 </div>
             </div>
+            <div className='text-white'>
+                <div className='p-4 mx-auto text-center'>
+                    <p className='text-[37px] md:text-[40px] font-semibold text-[#FFD5A4]'>Key Features</p>
+                    <div className='flex flex-wrap justify-evenly lg:mt-[82.17px] mt-[47px] '>
+                        <div className='flex flex-col items-center max-w-[17rem] mb-[25px] gap-4'>
+                            <Image
+                                src="/Group1000006699.png"
+                                alt="picture"
+                                width={89.01}
+                                height={103.7}
+                            />
+                            <p className='lg:w-[251px] w-[332px] lg:text-[25px] text-[20px] font-semibold mt-4'>Sacred Vedic Devotion Hub</p>
+                            <p className='font-light text-[15px] lg:text-[19px] text-center max-w-[274px] font-sans'>Dive into distraction-free devotion and access the essence of the Vedas, nurturing your spiritual journey.</p>
+                        </div>
+                        <div className='flex flex-col items-center max-w-[13rem] mb-[25px] gap-4'>
+                            <Image
+                                src="/Group1000006701.png"
+                                alt="picture"
+                                width={62.08}
+                                height={116.12}
+                            />
+                            <p className='lg:w-[251px] w-[282px] lg:text-[25px] text-[19px] font-semibold mt-4'>Flagship Sadhana App</p>
+                            <p className='font-light text-[15px] lg:text-[17px] text-center max-w-[326px] font-sans'>Interact with our revolutionary App for interactive Vedic worship, ad-free, subscription-free, and accessible to all.</p>
+                        </div>
+                        <div className='flex flex-col items-center max-w-[17rem] gap-4'>
+                            <Image
+                                src="/Group1000006700.png"
+                                alt="picture"
+                                width={104}
+                                height={104.12}
+                            />
+                            <p className='lg:w-[251px] w-[332px] lg:text-[25px] text-[20px] font-semibold mt-4'>Curated Spiritual Content</p>
+                            <p className='font-light text-[15px] lg:text-[20px] text-center max-w-[334px] font-sans'>Handpicked spiritual books licensed from renowned authors, podcasts, soulful music, and guided meditation courses.</p>
+                        </div>
+                    </div>
+                </div>
 
+
+            </div>
+            <div className='text-white mt-[150px] lg:mt-[114px]'>
+                <h1 className='text-center text-[#ABE1FF] text-[33px] lg:text-[40px] text-semibold'>$1500 Worth of Pre-Installed Spiritual <br /> Content at Your Fingertips</h1>
+                <br />
+                <Image
+                    src="/knowyourtablet1.png"
+                    alt="picture"
+                    width={980}
+                    height={546}
+                    className='m-auto'
+                />
+                <div className='flex flex-wrap justify-evenly items-center mt-8'>
+                    <div className='flex text-center gap-4 lg:flex-row flex-col'>
+                        <Image
+                            src="/Group1000006703.png"
+                            alt="picture"
+                            width={73}
+                            height={73.1}
+                            className='m-auto'
+                        />
+                        <p className='max-w-[19rem] font-semibold text-[15px] lg:text-[25px] mb-[25px]'>A 10-inch ultraportable model with a spacious liquid retina display.</p>
+                    </div>
+                    <div className='flex text-center gap-4 lg:flex-row flex-col'>
+                        <Image
+                            src="/Group1000006702.png"
+                            alt="picture"
+                            width={53}
+                            height={71.66}
+                            className='m-auto'
+                        />
+                        <p className='max-w-[16rem] font-semibold text-[15px] lg:text-[25px] mb-[25px]'>Supercharged by the xx chip, with battery life up to 18 hours.</p>
+                    </div>
+
+                    <div className='flex gap-4 lg:w-full lg:text-center lg:mt-[50px] justify-center  items-center text-center lg:flex-row flex-col '>
+                        <Image
+                            src="/Vector.png"
+                            alt="picture"
+                            width={76}
+                            height={62}
+                            className='h-[62px]'/>
+                        <p className='lg:max-w-[22rem] max-w-[19rem] font-semibold text-[15px] lg:text-[25px] lg:mt-4 '>Blazing fast performance, latest Bluetooth technology and enhanced augmented reality.</p>
+                    </div>
+                </div>
+                <br />
+                <h1 className='lg:text-[40px] text-[37px] font-semibold text-center text-[#ABE1FF] mt-[103px]'>Pro Benefits</h1>
+                <div className='flex mt-8 justify-evenly lg:flex-row md:flex-row flex-col p-2'>
+                    <div className='flex gap-4 p-4'>
+                        <Image
+                            src="/Group.png"
+                            alt="picture"
+                            width={73}
+                            height={73.1}
+                            className='m-auto'
+                        />
+                        <div className='text-center'>
+                            <p className='font-semibold lg:text-[25px] text-[15px]'>Insure and Assure</p>
+                            <br />
+                            <p className='max-w-[28rem] lg:text-[25px] text-[15px] text-center'>Peace of mind with 1-year warranty, 24/7 support, and the assurance of a replacement if needed.</p>
+                        </div>
+                    </div>
+                    <hr className='text-white border-[1px] lg:h-[200px] md:h-[140px] ' />
+                    <div className='flex gap-4  p-4'>
+                        <Image
+                            src="/Group(1).png"
+                            alt="picture"
+                            width={53}
+                            height={71.66}
+                            className='m-auto'
+                        />
+                        <div className='text-center'>
+                            <p className='font-semibold lg:text-[24px] text-[13.8px]'>Exclusive Access to New Apps</p>
+                            <br />
+                            <p className='max-w-[29rem] lg:text-[25px] text-[15px] text-center'>Be among the first to explore two new apps launching in 2024 before the general audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <p className='lg:text-[40px] text-[32px] font-semibold text-center text-[#FFD5A4] mt-[100px] mx-[10px]'>What’s in the box</p>
+                <br />
+                <div className='flex justify-center lg:mt-[112px] mt-[47px] lg:mx-[80px] mx-[21px]'>
+                    <video width="1280" height="777" autoPlay className='rounded-[20px]' loop muted>
+                        <source src="/Galaxy.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div className='w-full max-w-[1011px] m-auto mt-[112px] flex flex-col justify-flex-start items-center gap-4 px-4 sm:px-6 lg:px-8'>
+                    <p className='font-semibold text-center text-[#FFD5A4] lg:text-[25px] text-[15px] lg:w-[105%] w-full md:w-[662px]'>
+                        Unlock a Wealth of Spiritual Wisdom featuring a treasure trove of spiritual wisdom, including interactive Vedic rituals, scriptures, e-books, podcasts, music and more.
+                    </p>
+                    <Image
+                        src="/Group1000006715.png"
+                        alt="picture"
+                        width={238}
+                        height={220}
+                        className='cursor-pointer'
+                    />
+                    <h3 className='lg:text-[25px] text-[15px] font-semibold'>Starting $XXX</h3>
+                    <p className='lg:text-[16px] text-[12px] font-light text-center'>33% discount on the subscription when bundled with your Sadhana Tablet purchase.</p>
+                </div>
+                <div className='w-full lg:w-[1077px] md:w-[764px] mx-auto px-4 mt-[73px]'>
+                        <h1 className='font-bold text-center text-[#FFD5A4] text-[30px] lg:text-[36px]'>Additional Section</h1>
+                        <div className="my-4 space-y-2 md:mt-8">
+                        <div
+                            className="group flex flex-col gap-2 p-2 text-white border-t-[1px]"
+                            tabIndex={1}
+                        >
+                            <div className="flex cursor-pointer items-center justify-between">
+                                <span className='lg:text-[24px] text-[15px]'> Technical Specifications </span>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+                                />
+                            </div>
+                            <div
+                                className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                        <div
+                            className="group flex flex-col gap-2 p-2 text-white border-t-[1px]"
+                            tabIndex={2}
+                        >
+                            <div className="flex cursor-pointer items-center justify-between">
+                                <span className='lg:text-[24px] text-[15px]'> Support & Assistance </span>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+                                />
+                            </div>
+                            <div
+                                className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                        <div
+                            className="group flex flex-col gap-2 p-2 text-white border-t-[1px]"
+                            tabIndex={3}
+                        >
+                            <div className="flex cursor-pointer items-center justify-between">
+                                <span className='lg:text-[24px] text-[15px]'> Warranty & Returns </span>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+                                />
+                            </div>
+                            <div
+                                className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                        <div
+                            className="group flex flex-col gap-2 p-2 text-white border-t-[1px]"
+                            tabIndex={4}
+                        >
+                            <div className="flex cursor-pointer items-center justify-between">
+                                <span className='lg:text-[24px] text-[15px]'>FAQs </span>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
+                                />
+                            </div>
+                            <div
+                                className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default PreOrder
+export default page
